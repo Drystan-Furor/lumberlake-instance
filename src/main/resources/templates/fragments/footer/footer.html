@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="footer">
+    <!--Footer-->
+    <footer class="text-black dark:text-slate-300 text-sm mt-16" id="footer">
+        <section class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
+            <h2 class="sr-only">contact gegevens</h2>
+            <address class="mb-2">
+                Lumberlake<br>
+                E-mail:
+                <a class="hover:opacity-90"
+                   href="mailto:gerdaarts@gmail.com"
+                   aria-label="Stuur een e-mail naar gerdaarts@gmail.com">
+                    gerdaarts@gmail.com
+                </a><br>
+                Phone: <a href="tel:+31634024746" aria-label="Bel ons op 06 34 02 47 46">(+31) 6 34024746</a><br>
+                Facebook: <a href="https://www.facebook.com/lumberlake.jackrussells">LumberLake</a>
+            </address>
+            <nav aria-label="footer" class="text-center flex flex-col gap-2 border rounded-xl p-2">
+                <a class="hover:opacity-80" href="#home">Home</a>
+                <a class="hover:opacity-80" href="#service">Services</a>
+                <a class="hover:opacity-80" href="#availability">Beschikbaarheid</a>
+                <a class="hover:opacity-80" href="#description">Over ons</a>
+                <a class="hover:opacity-80" href="#about">Onze Honden</a>
+                <a class="hover:opacity-80" href="#contact">Contact</a>
+                <a class="hover:opacity-90 inline-flex items-center justify-center"
+                   href="https://www.facebook.com/lumberlake.jackrussells"
+                   aria-label="Facebook">
+                    <svg class="w-6 h-6" viewBox="0 0 512 512">
+                        <circle cx="256" cy="256" r="256" fill="#1877F2"/>
+                        <path d="M334 176h-42c-11 0-22 9-22 20v40h60l-10 60h-50v160h-60V296h-50v-60h50v-50c0-44 36-80 80-80h44v70z"
+                              fill="white"/>
+                    </svg>
+                    facebook
+                </a>
+                <a class="hover:opacity-80" href="./pages/information/info.html">ℹ️ info page</a>
+            </nav>
+            <div class="flex flex-col sm:gap-2">
+                <a href="https://arts-ict.nl">
+                    <p class="text-right text-nowrap">
+                        &copy; <span id="year">2025</span> Arts ICT | All rights reserved
+                        <img loading="lazy" width="482" height="132"
+                             class='mx-right mt-10 ml-2 pl-2 w-80' src="./img/arts_ict.png"
+                             alt='Arts ict logo'>
+                    </p>
+                </a>
+                <!-- Arts ICT -->
+            </div>
+        </section>
+    </footer>
+</th:block>
+</html>

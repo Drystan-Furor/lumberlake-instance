@@ -38,15 +38,14 @@ arts_ict_page.main.menuButtonFunctions = () => {
 }
 
 arts_ict_page.main.themeToggle = function () {
-    // Function to toggle the dark-theme class
+    const root = document.documentElement;
+
     function toggleDarkTheme(shouldAdd) {
-        document.body.classList.toggle('dark-theme', shouldAdd);
+        root.classList.toggle('dark-theme', shouldAdd);
     }
 
-    // Initial check for dark mode preference
     toggleDarkTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
 
-    // Listener for changes in the system's dark mode preference
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
         toggleDarkTheme(event.matches);
     });

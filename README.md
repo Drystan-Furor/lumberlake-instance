@@ -1,14 +1,23 @@
 # Arts ICT
 ## landingpage for generic purposes
 
+```bash
+npm run tailwind:build
+```
+```bash
+npm run tailwind:watch
+```
+
 "Run" scripts work after initial setup
-``` run tailwind
+```bash
 npm run tailwind
+npx @tailwindcss/cli -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/css/style.css --watch
 ```
-``` run build
-npm run build
+```bash
+npm run webpack
+npm run webpack:watch
 ```
-``` run prettier
+```bash
 npm run prettier
 ```
 
@@ -17,17 +26,20 @@ for f in *.png; do avifenc -q 50 -s 2 "$f" "${f%.*}.avif"; done
 ### initial setup
 
 Step 1
-```install lts version
+install lts version
+```bash
 nvm install 20
 nvm use 20
 ```
 
-```init npm
-npm init 
+install npm
+```bash
+npm install 
 ```
 
-```install npm
-npm install 
+init npm
+```bash
+npm init 
 ```
 
 ```install tailwind css
