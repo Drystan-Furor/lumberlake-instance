@@ -78,6 +78,7 @@ Step 3
 ```
 
 
+gh repo create lumberlake-instance --public --source=. --remote=origin --push
 
 Step 4
 ``` Start the Tailwind CLI build process
@@ -154,3 +155,43 @@ done
 echo "Renaming complete."
 
 
+## GIT
+To create a new repo from a new folder:
+
+mkdir my-repo
+cd my-repo
+git init
+echo "# my-repo" > README.md
+git add .
+git commit -m "Initial commit"
+gh repo create my-repo --public --source=. --remote=origin --push
+
+For a private repo, replace --public with --private.
+
+If you already have a local project folder:
+
+cd your-project
+git init
+git add .
+git commit -m "Initial commit"
+gh repo create your-project --public --source=. --remote=origin --push
+
+If you want the branch to be master instead of main, run this before gh repo create:
+
+git branch -M master
+
+Your repo is using HTTPS, and the stored GitHub credential is invalid. GitHub passwords do not work for git push; they were removed for Git operations on August 13, 2021.
+
+Fastest fix on this machine:
+
+gh auth logout -h github.com -u Drystan-Furor
+gh auth login -h github.com --git-protocol https --web
+gh auth setup-git
+git push -u origin master
+
+What this does:
+
+- gh auth login gets you a fresh GitHub token
+- gh auth setup-git teaches Git to use that token for HTTPS pushes
+
+If you prefer SSH instead, I can give you the SSH setup commands instead.
