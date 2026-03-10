@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .section-min-height {
+        min-height: calc(100vh - 68px);
+    }
+
+    .toggle-btn {
+        @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45
+        [&>div::after]:translate-y-0 [&>div::after]:-rotate-45
+        [&>div]:bg-transparent [&>div]:rotate-[720deg]
+    }
+
+    /* Base Styles */
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .table-responsive th, .table-responsive td {
+        white-space: nowrap;
+    }
+
+    .bg-gradient {
+        background: linear-gradient(90deg,
+        #b45700 10%, /* Dog Brown */
+        #36755e 30%, /* Mont Vert Green */
+        #3092b6 50%, /* Lac Blue */
+        #36755e 65%, /* Mont Vert Green */
+        #b45700 95%); /* Dog Brown */
+    }
+
+    .gradient {
+        background: linear-gradient(90deg,
+        #b45700 10%, /* Dog Brown */ #36755e 30%, /* Mont Vert Green */ #3092b6 50%, /* Lac Blue */ #36755e 65%, /* Mont Vert Green */ #b45700 95%); /* Dog Brown */
+    }
+
+    :root {
+        --fill-color-light: #FFFFFF; /* White for light theme */
+        --fill-color-dark: #1F2937; /* Dark slate for dark theme */
+    }
+
+    body.dark-theme {
+        --fill-color: var(--fill-color-dark);
+    }
+
+    body {
+        --fill-color: var(--fill-color-light);
+    }
+
+    .Gold {
+        background: linear-gradient(to right,#bf953f,#fcf6ba,#b38728,#fbf5b7,#aa771c);
+        color: rgb(121, 103, 3);
+        transition-duration: 3s;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.144);
+        background-size: 200% 200%;
+    }
+
+    .Gold:hover {
+        transform: scale(0.95);
+        transition-duration: 3s;
+        animation: gradient 5s ease infinite;
+        background-position: right;
+    }
+
+    .Regular {
+        background: linear-gradient(to right, #c08955 ,#b38728, #808000, #527903);
+        color: rgb(121, 103, 3);
+        transition-duration: 3s;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.144);
+        background-size: 200% 200%;
+    }
+
+    .Regular:hover {
+        transform: scale(0.95);
+        transition-duration: 3s;
+        animation: gradient 5s ease infinite;
+        background-position: right;
+    }
+
+    .Premium {
+        background: linear-gradient(to right, #d35400, #d58911, #af3c16, #d58911, #d35400);
+        color: rgb(131, 92, 59);
+        transition-duration: 3s;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.144);
+        background-size: 200% 200%;
+    }
+
+
+    .Premium:hover {
+        transform: scale(0.95);
+        transition-duration: 3s;
+        animation: gradient 5s ease infinite;
+        background-position: right;
+    }
+
+    .Btn {
+        width: 200px;
+        height: 40px;
+        border: none;
+        border-radius: 40px;
+        background: linear-gradient(to right, #bfbebc, #f9dcd5, #a8a6a3,#f9dcd5,
+        #afaeac);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 0.8em;
+        color: rgb(121, 103, 3);
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        transition-duration: 3s;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.144);
+        background-size: 200% 200%;
+    }
+
+    .logoIcon path {
+        fill: rgb(121, 103, 3);
+    }
+
+    .Btn:hover {
+        transform: scale(0.95);
+        transition-duration: 3s;
+        animation: gradient 5s ease infinite;
+        background-position: right;
+    }
+
+    .BtnBlue {
+        width: 200px;
+        height: 40px;
+        border: none;
+        border-radius: 40px;
+        background: linear-gradient(to right, #3092b6, #36755e, #3092b6, #36755e, #3092b6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 0.8em;
+        color: rgb(252, 137, 3);
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        transition-duration: 3s;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.144);
+        background-size: 200% 200%;
+    }
+
+    .BtnBlue:hover {
+        transform: scale(0.95);
+        transition-duration: 3s;
+        animation: gradient 5s ease infinite;
+        background-position: right;
+    }
+
+
+    .container-bucket {
+        padding: 0;
+        margin: 0;
+    }
+
+    .bucket {
+        width: 320px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    .bucket > div {
+        margin: 20px 10px;
+        background-color: #000;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+        overflow: hidden;
+    }
+    .bucket > div img {
+        display: block;
+    }
+
+
+    /* Media Query for small screens */
+    @media (max-width: 480px) {
+        .table-responsive th, .table-responsive td {
+            display: block;
+            width: 100%;
+        }
+
+        .table-responsive td[data-label]:before {
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .table-responsive thead {
+            display: none;  /* This hides the table header */
+        }
+    }
+
+}

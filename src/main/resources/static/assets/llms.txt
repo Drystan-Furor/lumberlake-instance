@@ -1,0 +1,37 @@
+# llms.txt — Arts ICT
+# Plaats op: https://lumberlake.nl/llms.txt
+# Laatst bijgewerkt: 2025-11-08
+
+site: https://arts-ict.nl
+owner: Arts ICT
+contact: mailto:gerdaarts@gmail.com
+
+# --- Toegang & gebruik ---
+# Crawlen voor discovery/zoek is oké; modeltraining niet.
+crawl-allow: /
+crawl-disallow: /build/ /node_modules/ /src/ /sitemaps/ /404.html
+
+# Beleid t.a.v. LLM’s
+train-allow: none            # géén gebruik voor modeltraining
+train-disallow: all
+derive-datasets: disallow    # geen opname in (her)distributie-datasets
+cache-max-age: 7d            # max. cacheduur
+
+# Weergave-beperkingen (voor antwoord/snippet in tools)
+display-allow: snippets
+display-max-chars: 200       # toon max. 200 tekens per fragment
+display-require-attribution: url,title
+
+# Verkeersnormen
+rate-limit: 1 rps            # max. 1 request per seconde vanaf 1 IP
+crawl-delay: 5s
+
+# Respecteer bestaande robots.txt en noindex/nofollow/meta-ai headers
+respect: robots.txt, meta-robots, x-robots-tag, meta-ai
+
+# Canonical & sitemap
+canonical: https://lumberlake.nl/
+sitemap: https://lumberlake.nl/sitemap.xml
+
+# Uitzonderingen (expliciet toegestaan)
+allow: /img/logo/
