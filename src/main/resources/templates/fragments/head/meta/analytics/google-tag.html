@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- Google tag (gtag.js) -->
+<th:block th:fragment="google-tag">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8KH5YKTSR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-D8KH5YKTSR');
+    </script>
+</th:block>
+</html>

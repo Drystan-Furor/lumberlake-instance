@@ -28,6 +28,7 @@
 	</scm>
 	<properties>
 		<java.version>25</java.version>
+		<npm.executable>npm</npm.executable>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -78,6 +79,14 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>target/generated-resources</directory>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -90,6 +99,43 @@
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.6.1</version>
+				<executions>
+					<execution>
+						<id>build-tailwind</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<workingDirectory>${project.basedir}</workingDirectory>
+							<executable>${npm.executable}</executable>
+							<arguments>
+								<argument>run</argument>
+								<argument>tailwind:build</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>build-webpack</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<workingDirectory>${project.basedir}</workingDirectory>
+							<executable>${npm.executable}</executable>
+							<arguments>
+								<argument>run</argument>
+								<argument>webpack</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

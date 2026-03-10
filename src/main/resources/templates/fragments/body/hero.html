@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="hero">
+    <section id="home" class="gradient">
+        <div class="container mx-auto px-6 text-center py-20 min-h-[50vh]">
+            <!-- LOGO -->
+            <div>
+                <div class="max-w-4xl mx-auto flex justify-between items-center mb-3">
+                    <img
+                            alt="lumberlake logo"
+                            class="sm:w-1/3 md:w-1/2 mx-auto rounded-full"
+                            width="512" height="512"
+                            src="./img/logo/logo.avif"
+                            fetchpriority="high"
+                            decoding="async">
+                </div>
+            </div>
+            <h1 class="mb-6 text-4xl font-bold text-center text-white">
+                Welkom bij Lumberlake <br>
+                Jack Russell Terriër Kennel!
+            </h1>
+            <h2 class="my-4 text-2xl text-white">
+                Wij zijn een kleinschalige kennel met raszuivere
+                <a href="https://nl.wikipedia.org/wiki/Jackrussellterri%C3%ABr">Jack Russell Terriërs</a>
+                die voldoen aan de eisen van de
+                Nederlandse Vereniging Jack Russell Terriër.
+            </h2>
+            <a href="#service"
+               class="inline-block bg-white text-black font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider text-center">
+                Services
+            </a>
+        </div>
+        <th:block th:insert="~{fragments/elements/waves/bottom.html :: bottom-wave-svg}"></th:block>
+    </section>
+</th:block>
+</html>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <th:block th:fragment="top-wave-svg">
-    <!-- top wave svg -->
     <div class="relative h-[140px] lg:h-[180px] overflow-hidden">
         <svg class="absolute inset-0 w-full h-full" preserveAspectRatio="none"
              viewBox="0 0 1439 147" xmlns="http://www.w3.org/2000/svg">
@@ -25,4 +24,10 @@
         </svg>
     </div>
 </th:block>
+
+<!--usage-->
+<th:block th:insert="~{fragments/elements/waves/top.html :: top-wave-svg}"></th:block>
+<th:block th:insert="~{fragments/elements/waves/bottom.html :: bottom-wave-svg}"></th:block>
+
 </html>
+

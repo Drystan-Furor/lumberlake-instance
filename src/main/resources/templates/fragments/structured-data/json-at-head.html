@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- structured data-->
+<th:block th:fragment="head-json">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Lumberlake Jack Russell Kennel",
+            "image": "https://lumberlake.onrender.com/img/logo/logo/logo-small.avif",
+            "url": "https://lumberlake.nl",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Manresastraat 8",
+                "postalCode": "5915VK",
+                "addressLocality": "Venlo",
+                "addressCountry": "NL"
+            },
+            "telephone": "+31 6 3402 4746",
+            "sameAs": [
+                "https://www.facebook.com/lumberlake.jackrussells"
+            ],
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+31 6 3402 4746",
+                "contactType": "customer service",
+                "areaServed": "NL",
+                "availableLanguage": "Dutch"
+            },
+            "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "EUR",
+                "lowPrice": 1500,
+                "highPrice": 2000,
+                "offerCount": 1,
+                "availability": "https://schema.org/InStock",
+                "priceValidUntil": "2026-10-30",
+                "url": "https://lumberlake.nl/contact"
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Lumberlake Jack Russell Kennel",
+            "url": "https://lumberlake.nl",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://lumberlake.nl/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Jack Russell Terriër Pups met Stamboom | Lumberlake Venlo",
+            "description": "Ervaren Jack Russell Terriër fokker in Venlo. Gezonde, sociale stamboom pups uit liefdevolle kennel.",
+            "url": "https://lumberlake.nl/",
+            "inLanguage": "nl-NL"
+        }
+    </script>
+</th:block>
+</html>

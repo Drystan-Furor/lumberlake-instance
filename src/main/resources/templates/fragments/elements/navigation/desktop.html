@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="desktop-nav">
+    <div class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+        <div class="text-3xl font-medium mr-2 flex items-center gap-2">
+            <a class="hover:opacity-90" href="https://www.facebook.com/lumberlake.jackrussells" aria-label="Facebook">
+                <svg class="w-6 h-6" viewBox="0 0 512 512" fill="white">
+                    <circle cx="256" cy="256" r="256" fill="#1877F2"/>
+                    <path d="M334 176h-42c-11 0-22 9-22 20v40h60l-10 60h-50v160h-60V296h-50v-60h50v-50c0-44 36-80 80-80h44v70z"
+                          fill="white"/>
+                </svg>
+            </a>
+            <a href="#home">
+                <span class="font-bold">Lumberlake</span>
+            </a>
+        </div>
+        <button id="hamburger-button"
+                type="button"
+                class="group md:hidden relative inline-flex h-8 w-8 items-center justify-center cursor-pointer"
+                aria-label="Menu"
+                aria-expanded="false">
+            <span class="sr-only">Toggle menu</span>
+            <span aria-hidden="true"
+                  class="hamburger-line relative block h-0.5 w-8 rounded bg-white transition-all duration-300
+           before:content-[''] before:absolute before:left-0 before:-translate-y-3
+           before:h-0.5 before:w-8 before:rounded before:bg-white before:transition-all before:duration-300
+           after:content-['']  after:absolute  after:left-0  after:translate-y-3
+           after:h-0.5  after:w-8  after:rounded  after:bg-white  after:transition-all  after:duration-300
+           group-[.toggle-btn]:bg-transparent
+           group-[.toggle-btn]:before:translate-y-0 group-[.toggle-btn]:before:rotate-45
+           group-[.toggle-btn]:after:translate-y-0  group-[.toggle-btn]:after:-rotate-45">
+            </span>
+        </button>
+        <nav aria-label="main" class="hidden md:block space-x-2 text-xl">
+            <a class="hover:opacity-90" href="#service"> Services </a>
+            <a class="hover:opacity-90" href="#availability">Pups</a>
+            <a class="hover:opacity-90" href="#description"> Over ons </a>
+            <a class="hover:opacity-90" href="#about"> Onze Honden </a>
+            <a class="hover:opacity-90" href="#contact"> Contact </a>
+            <a class="hover:opacity-90" href="#fotoboek"> Foto's </a>
+            <a class="hover:opacity-90" href="./pages/information/info.html">ℹ️</a>
+        </nav>
+    </div>
+
+</th:block>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--Mobile Nav Menu -->
+<th:block th:fragment="mobile-nav">
+    <div id="mobile-menu" class="fixed inset-0 z-[50] h-dvh bg-gradient w-full text-5xl flex-col justify-content-center
+            origin-top animate-open-menu overflow-y-auto hidden pb-40 mt-20">
+        <nav aria-label="mobile"
+             class="flex flex-col items-center py-8">
+            <a class="w-full text-center py-6 hover:opacity-80" href="#home"
+            >Home</a>
+            <a class="w-full text-center py-6 hover:opacity-80" href="#service"
+            >Services</a>
+            <a class="w-full text-center py-6 hover:opacity-80" href="#availability"
+            >Pups</a>
+            <a class="w-full text-center py-6 hover:opacity-80" href="#description"
+            >Over Ons</a>
+            <a class="w-full text-center py-6 hover:opacity-80" href="#about"
+            >Onze Honden</a>
+            <a class="w-full text-center py-6 hover:opacity-80" href="#contact">
+                Contact
+            </a>
+            <a class="w-full text-center py-6 hover:opacity-80" href="#footer"
+            >Legal</a>
+            <a class="w-full text-center py-6 hover:opacity-80" href="#fotoboek"
+            > Fotoboek </a>
+            <a class="w-full text-center py-6 hover:opacity-80" href="./pages/information/info.html"
+            > ℹ️ </a>
+            <a class="hover:opacity-90" href="https://www.facebook.com/lumberlake.jackrussells" aria-label="Facebook">
+                <svg class="w-6 h-6" viewBox="0 0 512 512" fill="white">
+                    <circle cx="256" cy="256" r="256" fill="#1877F2"/>
+                    <path d="M334 176h-42c-11 0-22 9-22 20v40h60l-10 60h-50v160h-60V296h-50v-60h50v-50c0-44 36-80 80-80h44v70z"
+                          fill="white"/>
+                </svg>
+            </a>
+        </nav>
+    </div>
+</th:block>
+</html>

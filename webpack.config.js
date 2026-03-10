@@ -1,6 +1,7 @@
 const path = require('path');
 
 const staticDir = path.resolve(__dirname, 'src/main/resources/static');
+const generatedStaticDir = path.resolve(__dirname, 'target/generated-resources/static');
 
 module.exports = {
     mode: 'production',
@@ -10,7 +11,7 @@ module.exports = {
         achievements: path.resolve(staticDir, 'js/achievements.js'),
     },
     output: {
-        path: path.resolve(staticDir, 'build/dist'),
+        path: path.resolve(generatedStaticDir, 'build/dist'),
         filename: '[name].bundle.js',
         clean: true,
         publicPath: '/build/dist/',

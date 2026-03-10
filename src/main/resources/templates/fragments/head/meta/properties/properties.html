@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="properties">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <meta name="description"
+          content="Jack Russell Terriër Kennel Lumberlake: ervaren fokker met liefde voor het ras. Gezonde stamboom pups, goed gesocialiseerd en klaar voor hun nieuwe thuis.">
+    <meta name="keywords"
+          content="jack russell terrier, jack russell terriër, jack russell pup, jack russell pups kopen, jack russell fokker, kennel jack russell, stamboom pups, raszuivere pups, sociale pups, gladhaar, ruwhaar, broken, dekreu jack russell, showlijn, familiehond, betrouwbare fokker, NVJRT, Lumberlake, jack russell breeder, pedigree puppies, buy jack russell puppy, Netherlands">
+
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Lumberlake | Jack Russell Terriër">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lumberlake.nl">
+    <meta property="og:title" content="Lumberlake | Jack Russell Terriër">
+    <meta property="og:description" content="LumberLake | Jack Russell Terriër">
+    <meta property="og:image" content="https://lumberlake.nl/img/logo/logo-small.avif">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lumberlake | Jack Russell Terriër">
+    <meta name="twitter:description" content="LumberLake | De Jack Russell Terriër fokker voor stamboom pups te kopen">
+    <meta name="twitter:image" content="https://www.lumberlake.nl/img/logo/logo.avif">
+    <meta name="robots" content="index, follow, max-snippet:-1,max-image-preview:standard,max-video-preview:-1">
+
+    <meta name="author" content="Arts ICT; Tristan Arts">
+</th:block>
+
+<th:block th:fragment="scripts">
+    <script defer th:src="@{/build/dist/main.bundle.js}" src="/build/dist/main.bundle.js"></script>
+    <script defer th:src="@{/build/dist/bucket.bundle.js}" src="/build/dist/bucket.bundle.js"></script>
+    <script defer th:src="@{/build/dist/achievements.bundle.js}" src="/build/dist/achievements.bundle.js"></script>
+</th:block>
+
+<th:block th:fragment="links">
+    <link rel="apple-touch-icon" sizes="180x180"
+          th:href="@{/assets/favicon/apple-touch-icon.png}"
+          href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+          th:href="@{/assets/favicon/favicon-32x32.png}"
+          href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+          th:href="@{/assets/favicon/favicon-16x16.png}"
+          href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest"
+          th:href="@{/assets/favicon/site.webmanifest}"
+          href="/assets/favicon/site.webmanifest">
+
+    <link rel="preload" as="image"
+          th:href="@{/img/logo/logo.avif}"
+          href="/img/logo/logo.avif"
+          fetchpriority="high">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="canonical" href="https://lumberlake.nl/">
+    <link rel="icon" th:href="@{/assets/favicon/favicon.ico}" href="/assets/favicon/favicon.ico">
+    <link rel="preload" th:href="@{/build/style.css}" href="/build/style.css" as="style">
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
+    <link rel="stylesheet" th:href="@{/build/style.css}" href="/build/style.css">
+
+</th:block>
+</html>

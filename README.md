@@ -9,10 +9,7 @@ npm run tailwind:watch
 ```
 
 "Run" scripts work after initial setup
-```bash
-npm run tailwind
-npx @tailwindcss/cli -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/css/style.css --watch
-```
+
 ```bash
 npm run webpack
 npm run webpack:watch
@@ -93,10 +90,13 @@ Step 3
 gh repo create lumberlake-instance --public --source=. --remote=origin --push
 
 Step 4
-``` Start the Tailwind CLI build process
-npx tailwindcss -i ./src/input.css -o ./src/style.css --watch
+Start the Tailwind CLI build process
+```bash
+npm run tailwind:build
+npx @tailwindcss/cli -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/css/style.css --watch
 ```
-``` run webpack
+run webpack
+``` 
 npx webpack --config webpack.config.js --watch
 ```
 ---
