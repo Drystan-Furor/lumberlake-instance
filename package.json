@@ -6,7 +6,7 @@
   "scripts": {
     "tailwind:build": "tailwindcss -i ./src/main/resources/static/css/input.css -o ./target/generated-resources/static/build/style.css",
     "tailwind:watch": "tailwindcss -i ./src/main/resources/static/css/input.css -o ./target/generated-resources/static/build/style.css --watch",
-    "webpack": "webpack --config webpack.config.js",
+    "webpack:build": "webpack --config webpack.config.js",
     "webpack:watch": "webpack --config webpack.config.js --watch"
   },
   "repository": {

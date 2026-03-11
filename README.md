@@ -1,26 +1,43 @@
 # Arts ICT
 ## landingpage for generic purposes
 
+Use:
 ```bash
-npm run tailwind:build
+docker compose up --build
 ```
+Then open http://localhost:8080.
+
+
+> "Run" scripts work after initial setup
+
+Development Watchers
 ```bash
 npm run tailwind:watch
 ```
-
-"Run" scripts work after initial setup
-
 ```bash
-npm run webpack
 npm run webpack:watch
 ```
+
+
+Single Build
 ```bash
-npm run prettier
+npm run tailwind:build
 ```
 
-for f in *.png; do avifenc -q 50 -s 2 "$f" "${f%.*}.avif"; done
+```bash
+npm run webpack:build
+```
+
 ---
-### initial setup
+
+Renames all files in the current directory to have a .png extension to .avif.
+
+```bash
+for f in *.png; do avifenc -q 50 -s 2 "$f" "${f%.*}.avif"; done
+```
+
+---
+## initial setup
 
 Step 1
 install lts version
@@ -86,19 +103,13 @@ Step 3
 
 ```
 
-
-gh repo create lumberlake-instance --public --source=. --remote=origin --push
-
 Step 4
 Start the Tailwind CLI build process
 ```bash
 npm run tailwind:build
 npx @tailwindcss/cli -i ./src/main/resources/static/css/input.css -o ./src/main/resources/static/css/style.css --watch
 ```
-run webpack
-``` 
-npx webpack --config webpack.config.js --watch
-```
+
 ---
 
 # GIT commands
@@ -170,36 +181,37 @@ echo "Renaming complete."
 ## GIT
 To create a new repo from a new folder:
 
+```git 
 mkdir my-repo
 cd my-repo
 git init
+git branch -M master
 echo "# my-repo" > README.md
 git add .
 git commit -m "Initial commit"
 gh repo create my-repo --public --source=. --remote=origin --push
 
-For a private repo, replace --public with --private.
+```
+> For a private repo, replace --public with --private.
 
 If you already have a local project folder:
 
+```git 
 cd your-project
 git init
 git add .
 git commit -m "Initial commit"
 gh repo create your-project --public --source=. --remote=origin --push
+```
 
-If you want the branch to be master instead of main, run this before gh repo create:
+Auth fix:
 
-git branch -M master
-
-Your repo is using HTTPS, and the stored GitHub credential is invalid. GitHub passwords do not work for git push; they were removed for Git operations on August 13, 2021.
-
-Fastest fix on this machine:
-
+```bash
 gh auth logout -h github.com -u Drystan-Furor
 gh auth login -h github.com --git-protocol https --web
 gh auth setup-git
 git push -u origin master
+```
 
 What this does:
 
@@ -207,3 +219,5 @@ What this does:
 - gh auth setup-git teaches Git to use that token for HTTPS pushes
 
 If you prefer SSH instead, I can give you the SSH setup commands instead.
+
+

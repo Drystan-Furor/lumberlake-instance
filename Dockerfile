@@ -8,6 +8,7 @@ RUN npm ci
 
 COPY tailwind.config.js webpack.config.js ./
 COPY src/main/resources/static ./src/main/resources/static
+COPY src/main/resources/templates ./src/main/resources/templates
 
 RUN npm run tailwind:build && npm run webpack
 
