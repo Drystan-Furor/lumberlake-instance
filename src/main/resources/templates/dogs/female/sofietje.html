@@ -23,7 +23,11 @@
                         <p class="text-slate-800 text-sm">
                             Star Pride United
                         </p>
-                        <div class="space-y-2" id="prestaties-list-sofietje">
+                        <div class="space-y-2">
+                            <div class="flex gap-2" th:each="achievement : ${sofietjeProfile.achievements}">
+                                <i class="w-5 h-5 text-yellow-300 dark:text-yellow-300 fas fa-star"></i>
+                                <span class="text-slate-800 text-sm" th:text="${achievement}">VB4</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -36,7 +40,7 @@
                  src="./img/dogs/sofie.avif">
             <span class="text-center text-neutral-900 dark:text-neutral-100 text-xs">Sofietje - Star Pride United</span>
         </div>
-        <script type="application/ld+json">
+        <script type="application/ld+json" th:inline="javascript">
             {
                 "@context": "https://schema.org",
                 "@type": "IndividualAnimal",
@@ -49,16 +53,7 @@
                 "birthDate": "2021-10-28",
                 "url": "https://lumberlake.nl/#sofietje-dame",
                 "identifier": "sofietje-star-pride-united",
-                "award": [
-                    "VB4",
-                    "VB4",
-                    "ZG 2x",
-                    "ZG2",
-                    "U3",
-                    "U2",
-                    "ZG1",
-                    "U1 2x"
-                ],
+                "award": /*[[${sofietjeProfile.achievements}]]*/ [],
                 "healthCondition": [
                     "ECVO vrij",
                     "Patella %",

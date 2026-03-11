@@ -32,13 +32,17 @@
                         <p class="text-slate-800 text-sm">
                             Algrafs Tsar
                         </p>
-                        <div class="space-y-2" id="prestaties-list-king">
+                        <div class="space-y-2">
+                            <div class="flex gap-2" th:each="achievement : ${kingProfile.achievements}">
+                                <i class="w-5 h-5 text-yellow-300 dark:text-yellow-300 fas fa-star"></i>
+                                <span class="text-slate-800 text-sm" th:text="${achievement}">VB1 1x</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script type="application/ld+json">
+        <script type="application/ld+json" th:inline="javascript">
             {
                 "@context": "https://schema.org",
                 "@type": "IndividualAnimal",
@@ -51,18 +55,7 @@
                 "birthDate": "2023-05-06",
                 "url": "https://lumberlake.nl/#king-sire",
                 "identifier": "king-algrafs-tsar",
-                "award": [
-                    "VB1 (1x)",
-                    "VB2 (4x)",
-                    "ZG (1x)",
-                    "U1 (8x)",
-                    "Beste Jeugdreu (2x)",
-                    "Beste Reu (1x)",
-                    "BOB (2x)",
-                    "Duits Jeugdkampioen '24",
-                    "Luxemburgs Jeugdkampioen '24",
-                    "Crufts kwalificatie"
-                ],
+                "award": /*[[${kingProfile.achievements}]]*/ [],
                 "healthCondition": [
                     "ECVO vrij",
                     "Patella vrij / flexibel",

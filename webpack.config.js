@@ -8,7 +8,6 @@ module.exports = {
     entry: {
         main: path.resolve(staticDir, 'js/main.js'),
         bucket: path.resolve(staticDir, 'js/bucket.js'),
-        achievements: path.resolve(staticDir, 'js/achievements.js'),
     },
     output: {
         path: path.resolve(generatedStaticDir, 'build/dist'),

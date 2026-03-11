@@ -6,7 +6,6 @@ arts_ict_page = {
 }
 
 arts_ict_page.main.initApp = () => {
-
     arts_ict_page.main.menuButtonFunctions();
     arts_ict_page.main.themeToggle();
 
@@ -14,11 +13,6 @@ arts_ict_page.main.initApp = () => {
     if (el) {
         el.innerText = arts_ict_page.main.getWeeksSince("13.5.25");
     }
-
-    arts_ict_page.list.emma();
-    arts_ict_page.list.king();
-    arts_ict_page.list.sofietje();
-
 }
 
 arts_ict_page.main.menuButtonFunctions = () => {

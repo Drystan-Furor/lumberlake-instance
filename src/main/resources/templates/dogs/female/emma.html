@@ -25,7 +25,11 @@
                         <p class="text-slate-800 text-sm">
                             LumberLake Beyond the Ordinary
                         </p>
-                        <div class="space-y-2" id="prestaties-list-emma">
+                        <div class="space-y-2">
+                            <div class="flex gap-2" th:each="achievement : ${emmaProfile.achievements}">
+                                <i class="w-5 h-5 text-yellow-300 dark:text-yellow-300 fas fa-star"></i>
+                                <span class="text-slate-800 text-sm" th:text="${achievement}">VP 2x ’14</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -38,7 +42,7 @@
                  src="./img/dogs/emma-stand.avif">
             <span class="text-center text-neutral-900 dark:text-neutral-100 text-xs">Emma - LumberLake Beyond the Ordinary</span>
         </div>
-        <script type="application/ld+json">
+        <script type="application/ld+json" th:inline="javascript">
             {
                 "@context": "https://schema.org",
                 "@type": "IndividualAnimal",
@@ -51,24 +55,7 @@
                 "birthDate": "2014-04-02",
                 "url": "https://lumberlake.nl/#emma-dame",
                 "identifier": "emma-beyond-the-ordinary",
-                "award": [
-                    "VP (2x) ’14",
-                    "U2 (3x) ’15",
-                    "U1 (12x)",
-                    "BOB (12x)",
-                    "CAC (10x)",
-                    "CACIB (6x)",
-                    "Res CAC (7x)",
-                    "BOS (10x)",
-                    "LU JK ’15",
-                    "RASGROEP 3 (2x)",
-                    "Res BIS (1x)",
-                    "BIS (1x)",
-                    "Beste Zelfgefokte Hond ’15 (2x)",
-                    "CW (1x)",
-                    "Dog of the Year Show ’16",
-                    "1e plaats PL RASGROEP 3"
-                ],
+                "award": /*[[${emmaProfile.achievements}]]*/ [],
                 "healthCondition": [
                     "ECVO vrij",
                     "Patella %",
