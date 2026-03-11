@@ -1,0 +1,8 @@
+.git
+.idea
+node_modules
+target
+Dockerfile
+compose.yaml
+README.md
+HELP.md
