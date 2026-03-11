@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="content">
+    <!--NAV -->
+    <header class="bg-yellow-700 text-white sticky top-0 z-10 gradient">
+        <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+            <h2 class="text-3xl font-medium mr-2">
+                <a href="/">
+                    <span class="font-bold">Lumberlake</span>
+                </a>
+            </h2>
+            <div>
+                <button class="text-3xl md:hidden cursor-pointer relative w-8 h-8"
+                        id="hamburger-button">
+                    <div class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"
+                    ></div>
+                </button>
+                <nav aria-label="main" class="hidden md:block space-x-8 text-xl">
+                    <a class="hover:opacity-90" href="#art1">Wat?</a>
+                    <a class="hover:opacity-90" href="#art2">Hoe?</a>
+                    <a class="hover:opacity-90" href="#art3">Titerbepaling</a>
+                    <a class="hover:opacity-90" href="#art4">Wanneer?</a>
+                    <a class="hover:opacity-90" href="#art5">Titerstrip lezen</a>
+                </nav>
+            </div>
+        </section>
+
+        <!--Mobile Nav Menu -->
+        <section
+                class="fixed inset-0 z-[50] h-dvh bg-gradient w-full text-5xl flex-col justify-content-center origin-top
+            animate-open-menu overflow-y-auto hidden pb-40 mt-20"
+                id="mobile-menu">
+            <nav aria-label="mobile"
+                 class="flex flex-col min-h-screen items-center py-8">
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art1"
+                >Wat?</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art2"
+                >Hoe?</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art3"
+                >Titerbepaling</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art4"
+                >Wanneer?</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art5"
+                >Titerstrip lezen</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#footer"
+                >Legal</a>
+            </nav>
+        </section>
+    </header>
+    <!--Hero-->
+    <section
+            id="home"
+            class="gradient">
+        <div class="container mx-auto px-6 text-center py-20">
+            <!-- LOGO -->
+            <div>
+                <section class="max-w-4xl mx-auto flex justify-between items-center mb-3">
+                    <img alt="design logo"
+                         class="sm:w-1/3 md:w-1/2 mx-auto rounded-full"
+                         src="/img/logo/logo.avif"/>
+                </section>
+            </div>
+            <h2 class="mb-6 text-4xl font-bold text-center text-white">
+                Welkom bij Lumberlake <br/>
+                Jack Russell Terriër Kennel!
+            </h2>
+            <h3 class="my-4 text-2xl text-white">
+                Deze pagina bevat uitgebreide uitleg over het titeren van honden en katten.
+            </h3>
+        </div>
+        <!-- bottom wave svg -->
+        <div class="relative -mt-12 lg:-mt-24">
+            <svg viewBox="0 0 1428 174" xmlns="http://www.w3.org/2000/svg">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g transform="translate(-2.000000, 44.000000)" fill="var(--fill-color)" fill-rule="nonzero">
+                        <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                              opacity="0.100000001"></path>
+                        <path
+                                d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                                opacity="0.100000001"
+                        ></path>
+                        <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                              id="Path-4" opacity="0.200000003"></path>
+                    </g>
+                    <g transform="translate(-4.000000, 76.000000)" fill="var(--fill-color)" fill-rule="nonzero">
+                        <path
+                                d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+                        ></path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="container mx-auto px-6 py-20" id="art1">
+        <div class="flex items-center flex-wrap mb-20">
+            <div class="flex items-center flex-wrap mb-20 mt-20 pt-20">
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl text-yellow-600 dark:text-yellow-600 font-bold mb-3 uppercase">
+                        TITEREN / VACCICHECK:
+                    </h2>
+                    <h3 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                        Wat is titeren?
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8">
+                        Door het afnemen van een druppeltje bloed van de hond of kat kan middels de
+                        VacciCheck antilichamentest worden bepaald of er nog voldoende antilichamen
+                        (antistoffen) in het bloed aanwezig zijn. Hierdoor kun je dus zien of er wel of niet
+                        gevaccineerd moet worden waardoor de hond of kat niet hoeft te worden belast
+                        door onnodige en/of overbodige vaccinaties. Hieronder zal voornamelijk over de
+                        hond gesproken worden omdat dat traject anders steekt, mede door de regelgeving,
+                        maar katten kunnen dus ook getiterd worden.
+                    </p>
+                    <h4 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                        Op welke antilichamen wordt er getiterd?
+                    </h4>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8">
+                        Met VacciCheck worden de antilichamen gemeten bij de hond van de 3 vaccins welke
+                        in de cocktail zitten, te weten:
+                    </p>
+                    <ul class="list-disc ml-6 space-y-2 mb-8">
+                        <li>Hondenziekte (Canine Distemper Virus of CDV)</li>
+                        <li>Infectieuze Hepatitis (Canine Adeno-2 Virus of CAV-2; ook tegen CAV-1)</li>
+                        <li>Parvo (Canine Parvo-2 Virus of CPV-2)</li>
+                    </ul>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8">
+                        Bij de kat wordt er getiterd op:
+                    </p>
+                    <ul class="list-disc ml-6 space-y-2 mb-8">
+                        <li>Kattenziekte (FPV)</li>
+                        <li>Herpes (FHV-1 of FHeV-1)</li>
+                        <li>Calici (VCF)</li>
+                    </ul>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8">
+                        Het titeren van katten gebeurt nog niet door alle artsen die honden titeren dus altijd
+                        even van tevoren goed informeren of ze ook katten titeren.
+                    </p>
+                    <h3 class="text-2xl font-bold mb-3">Waarom wordt er niet op Rabiës getiterd?
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Omdat dit ongeacht de uitslag (is overigens een heel andere test) een wettelijk
+                        verplichte enting is en er niet door middel van een test hierop uitzonderingen mogen
+                        worden gemaakt. Je zult dus t.a.t. over een geldige Rabiësenting moeten beschikken
+                        indien de hond meegaat naar het buitenland.
+                    </p>
+                    <h3 class="text-2xl font-bold mb-3">Waarom wordt er niet op Leptospirose (o.a. ziekte van Weil)
+                        getiterd?
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Omdat Leptospirose een bacteriële infectie is, waarvoor geen titerbepaling mogelijk
+                        is. Voor een virusziekte kan dat wel. Daarnaast is de Lepto-vaccinatie maar voor een
+                        korte bepaalde tijd werkzaam (het is een dood vaccin) waardoor het ook geen zin
+                        heeft.
+                    </p>
+                </div>
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <img
+                            alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                            class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                            src="/img/photobook/32.avif"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art2">
+            <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                <img
+                        alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                        class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                        src="/img/photobook/10.avif"
+                />
+            </div>
+            <div class="w-full md:w-1/2">
+                <section class="my-6">
+                    <h3 class="text-2xl font-bold mb-3">Hoe gaat het in z'n werk en hoe lang duurt het voordat de uitslag
+                        bekend is?
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Er wordt een druppeltje bloed afgenomen bij de hond en dit wordt in de VacciCheck
+                        gedaan. De test zelf duurt een half uurtje maar dit is afhankelijk van de werkwijze van
+                        de dierenarts. Er zijn dierenartsen die bijvoorbeeld 'titerdagen' organiseren en dan
+                        wachten ze tot ze zoveel mogelijk tests tegelijk kunnen doen (er kunnen maximaal 12
+                        dieren getest worden met één VacciCheck) en dan kan het dus zijn dat je pas een
+                        paar uur later de uitslag krijgt. Ga je met een groep dan zal normaliter eerst bij alle
+                        honden het bloed worden afgenomen waarna de VacciCheck dus gestart kan worden
+                        en zodra de uitslagen bekend zijn worden de paspoorten ingevuld en afgetekend.
+                        Indien nodig worden de honden uiteraard ingeënt. Vraag dus gewoon even van
+                        tevoren naar de werkwijze.
+                    </p>
+                    <h3 class="text-2xl font-bold mb-3">Is een titerbepaling officieel erkend?
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Inmiddels hebben o.a. de WSAVA, de KNMVD, de NVWA, de Dibevo en de Raad van
+                        Beheer heeft de titerbepaling erkend. Dit is te lezen in de door de Raad van Beheer
+                        gepubliceerde Raadar, uitgave januari 2015, pagina 7 onderaan.
+                        <br>Link naar archief van de Raad van Beheer:
+                        <a href="https://www.houdenvanhonden.nl/nieuws-archief-2015/" class="text-blue-500">
+                            klik hier
+                        </a>
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="border rounded-xl mb-20 mt-20 pt-20 bg-gray-400 text-black" id="art3">
+            <h3 class="text-2xl font-bold m-3 ">RAAD VAN BEHEER OVER VACCINEREN VS TITERBEPALING
+            </h3>
+            <div class="flex items-center flex-wrap border border-black shadow-xl rounded-xl m-2 text-black dark:text-black">
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <p class="mb-8">
+                        De Raad van Beheer wordt regelmatig gevraagd om
+                        zijn standpunt ten aanzien van vaccinatie versus
+                        titerbepaling. Hoewel vroeger de sneltests voor
+                        titerbepaling onvoldoende betrouwbaar bleken, lijken
+                        deze de afgelopen tijd in kwaliteit te zijn toegenomen.
+                        Toch is het beleid van de Nederlandse dierenartsen
+                        nog altijd 'vaccinatie op maat'.
+                    </p>
+                    <p class="mb-8">
+                        Dit betekent dat de basisvaccinaties in orde moeten
+                        zijn. Als die in orde zijn, kan vervolgens de frequentie
+                        waarin gevaccineerd moet worden omlaag. Het is daarbij
+                        natuurlijke wel belangrijk om de geldigheidsduur van
+                        een vaccinatie in acht te nemen. Bij deelname aan shows |
+                        is het belangrijk dat de hond goed beschermd is én
+                        geen andere honden kan besmetten (in de reglementen
+                        staat: voldoende geent, middels (reguliere) vaccinaties
+                        waarvan de geldigheid aantoonbaar is). Er komen daar
+                        tenslotte veel honden bijeen.
+                    </p>
+                </div>
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <p class="mb-8">
+                        Wanneer de dierenarts aangeeft dat de hond voldoende
+                        beschermd is om ook deel te nemen aan shows,
+                        dan kan een titerbepaling en een verklaring van de
+                        dierenarts gezien worden als bewijs dat de hond
+                        "voldoende gevaccineerd" is. Let wel: de dierenarts
+                        moet ook aangeven hoe lang de hond voldoende
+                        beschermd/gevaccineerd is en zo wordter dus een
+                        geldigheidstermijn aan de verklaring gekoppeld.
+                    </p>
+                    <h3 class="text-2xl font-bold mb-3">Zie ook het standpunt van de KNMvD
+                    </h3>
+                    <p class="mb-8">
+                        Ook pensions mogen honden en katten toelaten die getiterd zijn
+                        <a href="https://www.knmvd.nl/groepen/GGG/item/10868287/Titerbepaling-pensions-is-
+                    toegestaan" class="text-blue-500">
+                            klik hier
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center flex-wrap mb-20 mt-20 pt-20">
+            <div class="w-full md:w-1/2">
+                <h3 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                    Titerbepaling pensions is toegestaan
+                </h3>
+                <p class="text-gray-600 dark:text-slate-300 mb-8">
+                    Volgens de NVWA mogen titerbepalingen bij honden en katten ook worden ingezet om aan de
+                    voorwaarden voor pensions te voldoen, zolang een dierenarts verklaart dat het dier voldoende
+                    beschermd is.
+                </p>
+                <p class="text-gray-600 dark:text-slate-300 mb-8">
+                    Daardoor hoeft niet standaard opnieuw gevaccineerd te worden wanneer een geldige titer
+                    al aantoont dat de hond of kat nog voldoende afweer heeft. Dit past binnen het principe van
+                    vaccineren op maat en voorkomt onnodige belasting van het immuunsysteem.
+                </p>
+                <p class="text-gray-600 dark:text-slate-300 mb-8">
+                    Overleg vooraf wel altijd met het pension en de dierenarts, zodat duidelijk is welke
+                    documentatie nodig is en hoe lang de verklaring geldig is.
+                </p>
+            </div>
+            <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                <img
+                        alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                        class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                        src="/img/photobook/16.avif"
+                />
+            </div>
+        </div>
+        <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art4">
+            <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                <img
+                        alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                        class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                        src="/img/photobook/29.avif"
+                />
+            </div>
+            <div class="w-full md:w-1/2">
+                <section class="my-6">
+                    <h3 class="text-2xl font-bold mb-3">Wanneer beginnen met titeren?
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Steeds meer fokkers stappen over naar eerst titeren en dan pas vaccineren. Het
+                        voordeel daarvan is dat je heel gericht kunt bepalen wanneer een pup zijn maternale
+                        antilichamen kwijt is en dus voor het eerst echt effectief gevaccineerd kan worden.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Ook voor volwassen honden is titeren zinvol wanneer je wilt nagaan of hervaccinatie
+                        daadwerkelijk nodig is. Bij een positieve titer kan vaak worden aangetoond dat er nog
+                        voldoende bescherming aanwezig is.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Bij fokteven is het verstandig vóór de dekking te controleren of er nog voldoende
+                        bescherming is, zodat pups in de eerste levensfase via de biest voldoende
+                        antistoffen meekrijgen.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art5">
+            <div class="w-full md:w-1/2">
+                <section class="my-6">
+                    <h3 class="text-2xl font-bold mb-3">Hoe lees je een titerstrip?
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        De VacciCheck geeft per ziekte een uitslag in een score. Afhankelijk van de hoogte van
+                        die score kan worden vastgesteld of de hond beschermd is of niet.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Een lage of negatieve uitslag betekent niet automatisch dat er direct gevaccineerd moet
+                        worden zonder verder overleg; leeftijd, vaccinatiegeschiedenis en gezondheidstoestand
+                        spelen ook mee in de interpretatie.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Daarom is het belangrijk dat de test wordt beoordeeld door een dierenarts die ervaring
+                        heeft met titeren en volgens de actuele richtlijnen werkt.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Meer informatie en een lijst met VacciCheck-dierenartsen is te vinden via:
+                        <a href="https://www.vaccicheck.nl/lijst-van-vaccicheck-dierenartsen" class="text-blue-500">
+                            vaccicheck.nl
+                        </a>
+                    </p>
+                </section>
+            </div>
+            <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                <img
+                        alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                        class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                        src="/img/photobook/28.avif"
+                />
+            </div>
+        </div>
+    </section>
+
+</th:block>
+</html>

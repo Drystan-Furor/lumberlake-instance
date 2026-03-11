@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="content">
+    <div>
+        <header class="bg-yellow-700 text-white sticky top-0 z-10 gradient">
+            <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+                <h2 class="text-3xl font-medium mr-2">
+                    <a href="/">
+                        <span class="font-bold">Lumberlake</span>
+                    </a>
+                </h2>
+                <div>
+                    <button class="text-3xl md:hidden cursor-pointer relative w-8 h-8"
+                            id="hamburger-button">
+                        <div class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"
+                        ></div>
+                    </button>
+                    <nav aria-label="main" class="hidden md:block space-x-8 text-xl">
+                        <a class="hover:opacity-90" href="#art1">Artikel</a>
+                    </nav>
+                </div>
+            </section>
+
+            <!--Mobile Nav Menu -->
+            <section
+                    class="fixed inset-0 z-[50] h-dvh bg-gradient w-full text-5xl flex-col justify-content-center origin-top
+            animate-open-menu overflow-y-auto hidden pb-40 mt-20"
+                    id="mobile-menu">
+                <nav aria-label="mobile"
+                     class="flex flex-col min-h-screen items-center py-8">
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art1"
+                    >Artikel</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#footer"
+                    >Legal</a>
+                </nav>
+            </section>
+        </header>
+        <!--Hero-->
+        <section
+                id="home"
+                class="gradient">
+            <div class="container mx-auto px-6 text-center py-20">
+                <!-- LOGO -->
+                <div>
+                    <section class="max-w-4xl mx-auto flex justify-between items-center mb-3">
+                        <img alt="design logo"
+                             class="sm:w-1/3 md:w-1/2 mx-auto rounded-full"
+                             src="/img/logo/logo.avif"/>
+                    </section>
+                </div>
+                <h2 class="mb-6 text-4xl font-bold text-center text-white">
+                    Welkom bij Lumberlake <br/>
+                    Jack Russell Terriër Kennel!
+                </h2>
+                <h3 class="my-4 text-2xl text-white">
+                    Deze pagina bevat inzichten over castreren en steriliseren.
+                </h3>
+            </div>
+            <!-- bottom wave svg -->
+            <div class="relative -mt-12 lg:-mt-24">
+                <svg viewBox="0 0 1428 174" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-2.000000, 44.000000)" fill="var(--fill-color)" fill-rule="nonzero">
+                            <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                                  opacity="0.100000001"></path>
+                            <path
+                                    d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                                    opacity="0.100000001"
+                            ></path>
+                            <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                                  id="Path-4" opacity="0.200000003"></path>
+                        </g>
+                        <g transform="translate(-4.000000, 76.000000)" fill="var(--fill-color)" fill-rule="nonzero">
+                            <path
+                                    d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+                            ></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+
+        <!--service-->
+        <section class="container mx-auto px-6 py-20">
+            <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art1">
+                <div class="w-full">
+                    <section class="my-6">
+                        <h2 class="text-3xl text-yellow-600 dark:text-yellow-600 font-bold mb-3 uppercase">
+                            Steriliseren, castreren.
+                        </h2>
+                        <h3 class="text-2xl font-bold mb-3">
+                            Wat is dat?
+                        </h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Onder "castratie" wordt verstaan: het verwijderen van de
+                            geslachtsklieren. Bij de reu zijn dit de testikels bij de teef de
+                            eierstokken. Vaak wordt van sterilisatie gesproken maar in
+                            feite is dit onjuist. Onder sterilisatie wordt het onderbreken
+                            van zaadleider dan wel eileider verstaan. Deze techniek is bij
+                            honden niet relevant. In dit artikeltje zal ik dus uitsluitend
+                            spreken van castratie.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Sinds een aantal jaren is het gebruikelijk onder dierenartsen
+                            om hondeneigenaren te adviseren hun honden op zeer jonge
+                            leeftijd te laten castreren. Vaak wordt tijdens het consult
+                            waarbij de laatste serie vaccinaties wordt gegeven al vaak de
+                            vraag gesteld of men een afspraak wenst te maken voor
+                            castratie voor de leeftijd van 6 maanden. Men doet het de
+                            eigenaar voorkomen dat dit een normale gang van zaken is en
+                            lijkt verbaasd te zijn als de eigenaar hier kritisch tegenover
+                            staat.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            De trend komt overwaaien uit de Verenigde Staten waar dit
+                            om redenen van geboortebeperking flink gestimuleerd wordt.
+                            De faculteit voor Dierengeneeskunde van de Rijksuniversiteit
+                            van Utrecht heeft dit beleid geruime tijd gepropageerd zodat
+                            een groot aantal jonge dierenartsen dit in hun praktijk is gaan
+                            adviseren. Daarbij wordt gesteld dat de kans op allerlei
+                            aandoeningen zoals tumoren van de melkklieren,
+                            baarmoederkanker of baarmoederontstekingen sterk
+                            verminderd is bij op jonge leeftijd gecastreerde dieren.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Ongetwijfeld zal daar een kern van waarheid in zitten maar
+                            behalve de evidente voordelen zijn er ook wel degelijk een
+                            aantal bezwaren voor deze handelswijze en er zijn op zijn
+                            minst aanwijzigen dat we voorzichtig en kritisch moeten zijn
+                            bij het volgen van deze trend.Het zal u niet verbazen dat ik op
+                            deze bezwaren wat verder wil ingaan.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-3">Incontinentie
+                        </h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Bij een aantal gecastreerde teven ontstaat urine-incontinentie,
+                            vooral in rust loopt de urine druppelsgewijs weg. Blijkbaar
+                            functioneert de sluitspier onvoldoende. Er is een medicatie
+                            mogelijk maar deze kan bij een aantal honden nogal wat
+                            bijwerkingen hebben. Het percentage incontinente dieren na
+                            castratie wordt in de literatuur aangegeven tussen de 2 en
+                            10%.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-3">
+                            Onderontwikkeld geslachtsapparaat
+                        </h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Het vroeg castreren leidt tot relatief onderontwikkelde
+                            uitwendige geslachtsdelen, dit kan ontstekingen van de
+                            voorhuid en de huid rondom de vulva tot gevolgen hebben.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-3">
+                            Bewegingsapparaat
+                        </h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            De geslachtshormonen van de hond die door de testikels en
+                            eierstokken worden geproduceerd spelen een belangrijke rol
+                            bij de groei. Er is aangetoond dat bij vroege castratie dieren de
+                            groei langer doorgaat en er dus langere maar lichtere botten
+                            ontstaan. Dit zal dus ongetwijfeld gevolgen hebben voor.
+                            bewegingsapparaat en dus ook het exterieur van de hond.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-3">
+                            Schildklier
+                        </h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Een gecastreerde hond wordt snel te dik, dat weet bijna
+                            iedereen. Mogelijk heeft dit te maken met een verminderde
+                            functie van de schildklier. Zeker is wel dat castratie de kans op
+                            een traag werkende schildklier sterk vergroot.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-3">
+                            Gedrag
+                        </h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Vaak wordt een hond gecastreerd omdat er sprake zou zijn van
+                            ongewenst gedrag (agressie, dominantie). Bepaalde vormen
+                            van ongewenst gedrag komen juist VAKER voor bij
+                            gecastreerde dieren dan bij intacte dieren. Vooral bij reuen met
+                            een onzeker en angstig karakter kan castratie leiden tot
+                            angstagressie! Verder is het zo dat teven die een onderdanig
+                            gedrag vertonen, wat timide zijn, na castratie dominanter en
+                            zelfverzekerder kunnen worden. Dat kan bij meerdere honden
+                            in huis rangordeproblemen opleveren vooral als de
+                            gecastreerde teef eerder ranglager was. De eigenaar zal deze
+                            situatie goed moeten inschatten en begeleiden.
+                            Als een dierenarts zonder reden een sterilisatie of castratie
+                            voorstelt, zoek dan een andere dierenarts! Er zijn er
+                            duizenden. Ook bij u in de buurt".
+                        </p>
+                        <h3 class="text-2xl font-bold mb-3">
+                            Tumoren
+                        </h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Tegenover het feit van verminderde kans op tumoren in de
+                            melkklieren staat dat er aanwijzigingen zijn dat er een hogere
+                            kans is op bottumoren (osteosarcomen) bij gecastreerde
+                            honden. Dit heeft ongetwijfeld te maken met de invloed van
+                            castratie op de botgroei. Ook zijn er aanwijzingen op relatief
+                            vaker voorkomende typen tumoren (haemangiosarcomen) bij
+                            gecastreerde dieren.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-3">
+                            Huid en beharing
+                        </h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Bij gecastreerde honden ontstaan vaak ernstige
+                            vachtproblemen. Er ontstaat een lelijke dikke wollige vacht,
+                            de glans verdwijnt en er is sprake van continu verharen. Men
+                            spreekt wel van een schapenvacht. Er zit dan niets anders op
+                            de hond 3 tot 4 x per jaar naar een trimsalon te brengen om
+                            hem/haar weer enigszins toonbaar te maken.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-3">
+                            Beschikbaarheid voor het ras
+                        </h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Wat voor ons als Fokcommissie natuurlijk van groot belang is:
+                            Gecastreerde honden zijn niet meer beschikbaar voor de
+                            fokkerij en op de fokdagen verschijnen soms uitmuntende
+                            honden voor de keurmeester die al een jaar eerder gecastreerd
+                            blijken te zijn. Voor ons en vaak ook voor de fokker van de
+                            hond een onplezierige verrassing. Vaak blijkt ook bij een
+                            gesprek met de eigenaar dat men klakkeloos is afgegaan op
+                            advies van de dierenarts.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-3">
+                            Ceconcludeerd
+                        </h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Geconcludeerd kan gezegd worden dat castratie van honden
+                            ongetwijfeld voordelen heeft maar dat er wel degelijk ook
+                            zwaarwegende nadelen aan verbonden zijn. En is het nu zo'n
+                            opgaaf om een loopse teef gedurende 3 weken bij de reuen
+                            vandaan te houden? De indruk bestaat dat veel eigenaren
+                            besluiten tot castratie uit gemakzucht. Hier ligt ook een taak
+                            van de fokkers: Geef uw pupkopers goede voorlichting over
+                            de voor- en vooral over de nadelen van castratie!
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            De boodschap die ik wil overbrengen is deze: zie het castreren
+                            van uw hond niet als iets dat "zo hoort"*, maar bekijk kritisch
+                            de voor- en nadelen. Als u, na het lezen van dit artikel, toch
+                            besluit uw hond te laten castreren, doe het dan niet te vroeg!
+                            Wacht tot uw hond uitgegroeid en ontwikkeld is, zowel
+                            psychisch als lichamelijk.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            De Faculteit voor Diergeneeskunde adviseert inmiddels ook
+                            weer het oude systeem van castratie na de eerste loopsheid op
+                            ongeveer 1,5 jaar. En besef dat u hond wel wat aandacht als u
+                            hem/haar deze laat ondergaan.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Aldus overgenomen en voor akkoord bevonden van Onze
+                            Drenth gepubliceerd op juni 2012 door:
+                            <br>
+                            Dhr. Bart van de Pol
+                            <br>
+                            Voorzitter FBC en dierenarts.
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+</th:block>
+</html>

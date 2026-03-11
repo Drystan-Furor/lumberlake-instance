@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="about">
+    <section class="container mx-auto py-20 px-6 min-h-[50vh]" id="about">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8 dark:text-slate-50">
+            Onze Honden:
+        </h2>
+        <a href="#heren"
+           class="BtnBlue flex w-fit items-center justify-center whitespace-nowrap mx-auto mb-2 text-white dark:text-white hover:text-amber-300 font-extrabold rounded-full py-5 px-10 shadow-lg uppercase tracking-widest text-xl">
+            Bekijk onze heren
+        </a>
+        <h3 id="dames"
+            class="mt-16 text-3xl font-bold text-center text-gray-800 mb-8 dark:text-slate-50">
+            Onze Dames:
+        </h3>
+
+        <th:block th:insert="~{dogs/female/emma :: content}"></th:block>
+        <hr class="mt-4 mb-4 mx-auto bg-black dark:bg-white w-1/2">
+
+        <th:block th:insert="~{dogs/female/mathilda :: content}"></th:block>
+        <hr class="mt-4 mb-4 mx-auto bg-black dark:bg-white w-1/2">
+
+        <th:block th:insert="~{dogs/female/abby :: content}"></th:block>
+        <hr class="mt-4 mb-4 mx-auto bg-black dark:bg-white w-1/2">
+
+        <th:block th:insert="~{dogs/female/yvvy :: content}"></th:block>
+        <hr class="mt-4 mb-4 mx-auto bg-black dark:bg-white w-1/2">
+
+        <th:block th:insert="~{dogs/female/sofietje :: content}"></th:block>
+        <hr class="mt-4 mb-4 mx-auto bg-black dark:bg-white w-1/2">
+
+        <a href="#dames"
+           class="BtnBlue flex w-fit items-center justify-center whitespace-nowrap mx-auto mb-2 text-white dark:text-white hover:text-amber-300 font-extrabold rounded-full py-5 px-10 shadow-lg uppercase tracking-widest text-xl">
+            Bekijk onze dames
+        </a>
+        <h3 id="heren"
+            class="mt-16 text-3xl font-bold text-center text-gray-800 mb-8 dark:text-slate-50">
+            Onze Heren:
+        </h3>
+
+        <th:block th:insert="~{dogs/male/king :: content}"></th:block>
+        <hr class="mt-4 mb-4 mx-auto bg-black dark:bg-white w-1/2">
+        <th:block th:insert="~{dogs/male/cooper :: content}"></th:block>
+        <hr class="mt-4 mb-4 mx-auto bg-black dark:bg-white w-1/2">
+    </section>
+
+</th:block>
+</html>

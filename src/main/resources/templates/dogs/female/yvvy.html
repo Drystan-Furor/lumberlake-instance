@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="content">
+    <div class="flex items-center flex-wrap mb-20 min-h-[80vh]">
+        <div class="w-full mx-auto sm:w-1/2 m-4">
+            <img loading="lazy" width="1200" height="800"
+                 alt="Yvvy - Jack Russell teefje van Lumberlake kennel"
+                 class="rounded-lg border-2 border-yellow-600 sm:max-w-full sm:h-auto shadow-2xl "
+                 src="./img/dogs/yvvy-stand.avif">
+            <span class="text-center text-neutral-900 dark:text-neutral-100 text-xs">YvvY - Rijan Rangers To Love Somebody</span>
+        </div>
+        <div class="w-full md:w-1/2 pl-10">
+            <div class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3" id="yvvy-dame">
+                YvvY
+            </div>
+            <div class="text-2xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                Rijan Rangers To Love Somebody | 26.12.2020
+            </div>
+            <p class="italic text-gray-600 dark:text-slate-300 mb-2">
+                ECVO vrij
+                | Patella %
+                | PLL normaal door DNA
+                | Levershunt vrij
+            </p>
+            <p class="text-gray-600 dark:text-slate-300 mb-8">
+                <br>VB3
+                <br>ZG3
+                <br>ZG1
+                <br>U2
+            </p>
+        </div>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "IndividualAnimal",
+                "name": "YvvY - Rijan Rangers To Love Somebody",
+                "alternateName": "Rijan Rangers To Love Somebody",
+                "description": "YvvY is een raszuivere Jack Russell teef met uitstekende gezondheid en showresultaten. Geboren op 26-12-2020 en gezond verklaard (ECVO vrij, Patella %, PLL normaal door DNA, Levershunt vrij).",
+                "image": "https://lumberlake.nl/img/dogs/yvvy-stand.avif",
+                "gender": "Female",
+                "breed": "Jack Russell Terrier",
+                "birthDate": "2020-12-26",
+                "url": "https://lumberlake.nl/#yvvy-dame",
+                "identifier": "yvvy-rijan-rangers-to-love-somebody",
+                "award": [
+                    "VB3",
+                    "ZG3",
+                    "ZG1",
+                    "U2"
+                ],
+                "healthCondition": [
+                    "ECVO vrij",
+                    "Patella %",
+                    "PLL normaal door DNA",
+                    "Levershunt vrij"
+                ],
+                "parentOrganization": {
+                    "@type": "LocalBusiness",
+                    "name": "Lumberlake Jack Russell Kennel",
+                    "url": "https://lumberlake.nl",
+                    "image": "https://lumberlake.onrender.com/img/logo/logo-small.avif",
+                    "telephone": "+31 6 3402 4746",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Manresastraat 8",
+                        "postalCode": "5915VK",
+                        "addressLocality": "Venlo",
+                        "addressCountry": "NL"
+                    }
+                }
+            }
+        </script>
+    </div>
+
+</th:block>
+</html>

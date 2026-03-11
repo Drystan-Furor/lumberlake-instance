@@ -6,12 +6,8 @@
 </head>
 <body class="min-h-screen font-sans text-gray-700 bg-white dark:bg-slate-800 dark:text-white leading-relaxed tracking-wide transition-colors duration-300">
 
-<header class="bg-yellow-700 text-white sticky top-0 z-10 gradient">
-    <th:block th:insert="~{fragments/elements/navigation/desktop :: desktop-nav}"></th:block>
-    <th:block th:insert="~{fragments/elements/navigation/mobile :: mobile-nav}"></th:block>
-</header>
-
-<th:block th:insert="~{fragments/home/home :: home}"></th:block>
-
+<th:block th:if="${contentFragment != null}" th:replace="~{${contentTemplate} :: ${contentFragment}}"></th:block>
+<th:block th:insert="~{pages/information/refer-home :: refer-home}"></th:block>
+<th:block th:insert="~{fragments/footer/pages/footer :: footer}"></th:block>
 </body>
 </html>

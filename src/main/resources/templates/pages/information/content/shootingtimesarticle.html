@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="content">
+    <div>
+        <header class="bg-yellow-700 text-white sticky top-0 z-10 gradient">
+            <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+                <h2 class="text-3xl font-medium mr-2">
+                    <a href="/">
+                        <span class="font-bold">Lumberlake</span>
+                    </a>
+                </h2>
+                <div>
+                    <button class="text-3xl md:hidden cursor-pointer relative w-8 h-8"
+                            id="hamburger-button">
+                        <div class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"
+                        ></div>
+                    </button>
+                    <nav aria-label="main" class="hidden md:block space-x-8 text-xl">
+                        <a class="hover:opacity-90" href="#art1">Artikel</a>
+                    </nav>
+                </div>
+            </section>
+
+            <!--Mobile Nav Menu -->
+            <section
+                    class="fixed inset-0 z-[50] h-dvh bg-gradient w-full text-5xl flex-col justify-content-center origin-top
+            animate-open-menu overflow-y-auto hidden pb-40 mt-20"
+                    id="mobile-menu">
+                <nav aria-label="mobile"
+                     class="flex flex-col min-h-screen items-center py-8">
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art1"
+                    >Artikel</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#footer"
+                    >Legal</a>
+                </nav>
+            </section>
+        </header>
+        <!--Hero-->
+        <section
+                id="home"
+                class="gradient">
+            <div class="container mx-auto px-6 text-center py-20">
+                <!-- LOGO -->
+                <div>
+                    <section class="max-w-4xl mx-auto flex justify-between items-center mb-3">
+                        <img alt="design logo"
+                             class="sm:w-1/3 md:w-1/2 mx-auto rounded-full"
+                             src="/img/logo/logo.avif"/>
+                    </section>
+                </div>
+                <h2 class="mb-6 text-4xl font-bold text-center text-white">
+                    Welkom bij Lumberlake <br/>
+                    Jack Russell Terriër Kennel!
+                </h2>
+                <h3 class="my-4 text-2xl text-white">
+                    Deze pagina bevat een artikel gepubliceerd in de Shooting Times die rijke achtergrondinformatie
+                    deelt.
+                </h3>
+
+            </div>
+            <!-- bottom wave svg -->
+            <div class="relative -mt-12 lg:-mt-24">
+                <svg viewBox="0 0 1428 174" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-2.000000, 44.000000)" fill="var(--fill-color)" fill-rule="nonzero">
+                            <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                                  opacity="0.100000001"></path>
+                            <path
+                                    d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                                    opacity="0.100000001"
+                            ></path>
+                            <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                                  id="Path-4" opacity="0.200000003"></path>
+                        </g>
+                        <g transform="translate(-4.000000, 76.000000)" fill="var(--fill-color)" fill-rule="nonzero">
+                            <path
+                                    d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+                            ></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+
+        <!-- Services -->
+        <section class="container mx-auto px-6 py-20" id="art1">
+            <div class="flex items-center flex-wrap mb-20">
+                <div class="flex items-center flex-wrap mb-20 mt-20 pt-20">
+                    <div class="w-full md:w-1/2">
+                        <h2 class="text-3xl text-yellow-600 dark:text-yellow-600 font-bold mb-3 uppercase">
+                            Zijn Terriers geboren anarchisten?
+                        </h2>
+                        <h3 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                            'de pretpolitie'
+                        </h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8">
+                            "Terriers zien ons vaak als 'de pretpolitie', maar als we de moeite nemen om ze bij de les
+                            te
+                            krijgen is hun werkethiek ongeëvenaard", zegt Jackie Drakeford.
+                            <br>
+                            Terriers brengen een glimlach op ons gezicht. Ofwel de zelfgenoegzaam meewarige grijns van
+                            de
+                            handler van goed getrainde jachthonden onder het geweer, ofwel je eigen grijns van
+                            verlegenheid
+                            vanwege het gedrag van je hond. Gedrag waarvan je dacht dat het niet slechter kon worden,
+                            totdat je
+                            ontdekte dat het dat zojuist werd...
+                            <br>
+                            Er zijn veel verschillende situaties waar we in terecht komen, en hoe wij als mensen
+                            reageren
+                            heeft veel invloed op onze jonge hondjes. Derhalve hebben wij wat tips op een rijte gezet,
+                            om
+                            je op weg te helpen. Natuurlijk mag je ook altijd contact opnemen als je vragen hebt.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Nogal wat eigenaren van goed getrainde jachthonden hebben ook een Terrier (ergens
+                            weggestopt).
+                            Meestal omschrijven ze die lachend als 'het knuffelbeest van hun wederhelft'. Soms geeft het
+                            dier in
+                            de linie van drijvers een demonstratie van al z'n capriolen, of weet het anderszins door
+                            verrassend
+                            gedrag de stemming van de dag te verlichten.<br>
+                            Dit mede door hun vasthoudendheid. Ik herinner mij een Terrier die tegen lunchtijd al 10
+                            procent van
+                            de dagvangst had gedaan door holen in te gaan, wat vervolgens resulteerde in drie uur lang
+                            graven
+                            naar een koude, slappe Terrier. Na een paar uur rusten in een deken was de hond klaar om er
+                            weer
+                            tegenaan te gaan, terwijl het de eigenaar weken kostte om over het
+                            incident heen te komen. En dan is er nog het 'bijna gevangen boven de grond'-spel: de
+                            Terrier geniet
+                            van een spannende jakkerpartij door de drijverslinie en langs de geweren, terwijl hij/zij de
+                            staart
+                            van de vos geen moment uit het oog verliest...
+                        </p>
+                    </div>
+                    <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                        <img
+                                alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                                class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                                src="/img/logo/logo.avif"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20 mt-20 pt-20">
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <img
+                            alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                            class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                            src="/img/photobook/27.avif"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                        Uitstekend trainbaar
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8">
+                        Terriers geven een heel nieuw perspectief aan het hebben van een hond. Maar ze zijn uitstekend
+                        train
+                        baar, zolang je aan de menselijke kant van de samenwerking een flexibele houding hebt. Het
+                        verlangen
+                        naar samenwerking, zoals we dat kennen van staande en apporterende jachthonden en van herders,
+                        is
+                        helemaal afwezig in Terriers. Tenzij we wat wij willen voor hen de moeite waard weten te maken,
+                        maar
+                        daarbij zijn het taaie onderhandelaars!
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Hondentypes kunnen we ruwweg verdelen in taakgericht: 'Wat gaan we samen doen?', waarbij de taak
+                        zelf de
+                        beloning is, en resultaatgericht, waarbij de hond naar een bepaald doel werkt vanuit de insteek:
+                        'Wat
+                        levert dit mij op?'.<br>
+                        Om de samenwerking van een Terrier te krijgen, moet deze ons niet zien als 'de pretpolitie' maar
+                        als
+                        wapenbroeder. Terriers zijn geboren anarchisten; hun kameraadschap krijg je niet cadeau, die
+                        moet
+                        verdiend worden. Hoewel ze gemaakt zijn om hun werk te doen - en het onze taak is om ervoor te
+                        zorgen
+                        dat ze daarmee niet beginnen voordat ze hun melktanden hebben gewisseld voor de geweldige
+                        wapenrusting
+                        van de volwassen Terrier - moeten wij als handlers bij hen voldoende remmen installeren, zodat
+                        we kunnen
+                        ingrijpen wanneer er iets gebeurt. In plaats van moeizaam proberen het wegstervende steeds
+                        sneller wordende gekef te volgen. Of erger nog, die oorverdovende stilte...
+                    </p>
+                    <h3 class="text-2xl font-bold mb-3">
+                        Leer een betrouwbaar 'hier'
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Voordat Terriers ooit van het plezier van najagen en (het moet gezegd worden) vechten proeven,
+                        is het
+                        onze taak om hen een betrouwbaar 'hierkomen' te leren. Eén van de moeilijkste dingen om een
+                        'resultaten'-hond aan te leren. Verder is het zaak de 'voorkeurs' werkafstand te verminderen,
+                        van 'van
+                        kust tot kust via overal' naar pakweg een meter of vijftig van ons. Elke hond heeft een afstand
+                        waarop
+                        de controle verzwakt, en bij Terriers is dat veeleer vroeger dan later. Hoewel de beperking ook
+                        weer
+                        niet te streng moet zijn, want dan zullen ze juist afstand scheppen voordat ze beginnen te
+                        werken.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Op hun korte pootjes kunnen ze nog steeds veel sneller uit de voeten dan dat een persoon kan
+                        rennen. Het
+                        is dus de bedoeling om de Terrier het loopwerk te laten doen, maar hem daarbij wel van tijd tot
+                        tijd in
+                        te laten checken. Hiervoor gebruiken we beloningsgerichte training. Verwacht niet dat je Terrier
+                        lofbetuigingen ('braaf", 'goed zo') belonend vindt, want het interesseert hem geen zier om jou
+                        te
+                        behagen. Het kost hem namelijk veel minder moeite om zichzelf te plezieren. We moeten dus
+                        slimheid en
+                        vooruitdenken gebruiken, om de Terrier ervan te overtuigen dat hij meer plezier heeft door bij
+                        ons te
+                        blijven dan door er vandoor te gaan. Hierbij zullen we slechts gedeeltelijk succesvol zijn, dus
+                        we
+                        moeten anticiperen en afbakenen, meer proactief zijn dan reactief. Een houding die moeilijk
+                        hanteerbaar
+                        kan zijn voor mensen die met name ervaring hebben met meer coöperatieve hondenrassen.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Training heeft altijd een zekere mate van kans om te falen in elk ras, maar management werkt
+                        altijd. We
+                        moeten steeds verschillende denkstappen voor zijn op Terriers, en wanneer ze dan doen wat we van
+                        ze
+                        verwachten, beloont de wijze handler op passende wijze. Dit betekent niet een brokje. Als we
+                        gedrag van
+                        100 euro willen, komen we nergens door een beloning van 50 eurocent te bieden...
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20">
+                <div class="flex items-center flex-wrap mb-20 mt-20 pt-20">
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                            Een lage vervelingsdrempel
+                        </h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8">
+                            We moeten onze beloningen ook variëren, omdat Terriers een buitengewoon lage
+                            vervelingsdrempel
+                            hebben. Het verrassingselement houdt hen geïnteresseerd. Van tijd tot tijd moet de beloning
+                            achterwege worden gelaten, omdat het gokken net zo verslavend is voor honden als dat het
+                            voor mensen
+                            kan zijn. Niemand is ooit verslaafd geraakt aan een snoep- of frisdrankautomaat...
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Alle Terriers worden zeer snel opgewonden en we moeten hun thuisleven kalm houden, zodat het
+                            uitgaan
+                            en werken met ons hun belangrijkste bron van vreugde is. Immers, waarom zouden ze
+                            samenwerken voor
+                            iets waarvan ze thuis op elk moment gemakkelijk kunnen genieten? Piepspeelgoed moet stil
+                            gemaakt
+                            worden door de pieper met een naald door te prikken, met uitzondering van één die
+                            uitsluitend op
+                            wandelingen en trainingen tevoorschijn komt. Deze wordt nooit aan de Terrier gegeven, het is
+                            een
+                            piep die in je jaszak woont. Wees spaarzaam met het verstrekken ervan, gebruik hem
+                            niet teveel. Dit geluid kan van onschatbare waarde zijn, in combinatie met een goed getimede
+                            beloning. Als je denkt dat je geen goede timing hebt, gebruik het speelgoed dan niet. Bijten
+                            in
+                            piepend speelgoed moedigt hard worden in de bek aan. Op hooguit enkele uitzonderingen na
+                            hebben
+                            Terriers geen aanmoediging in deze richting nodig, in wat voor vorm dan ook. Als
+                            je je Terrier alleen als een stoere of ruige metgezel wilt, is het beter om ze helemaal te
+                            vermijden.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Er zijn gradaties in de mate van 'Terrierheid', net zoals er verschillende niveaus zijn bij
+                            voorstaande en apporterende honden. Terwijl elke Terrier ratten zal vangen, houd je
+                            carriëre-Terriers - die speciaal gefokt worden om te werken als aardhonden - beter voor
+                            alleen die
+                            elitetaak. In de trendy bewoordingen die ik hoorde op een conferentie die geen enkel verband
+                            had met
+                            hondenaangelegenheden, zijn deze honden geneigd 'zich te wenden naar bronnen van nieuwe
+                            chaos'. Hun
+                            hele wezen concentreert zich op het ondergronds gaan en het pakken van een verscheidenheid
+                            aan
+                            prooien.
+                        </p>
+                    </div>
+                    <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                        <img
+                                alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                                class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                                src="/img/photobook/25.avif"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20 mt-20 pt-20">
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <img
+                            alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                            class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                            src="/img/photobook/26.avif"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                        Gezinsleven
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8">
+                        Andere Terriers zijn meer geschikt voor het gezinsleven, hoewel ze hun Terriergeest behouden. En
+                        meer
+                        belangstelling tonen om onder de grond te gaan dan dat comfortabel is voor de persoon die gewoon
+                        een
+                        ruige metgezel wilde. Terwijl de meeste Terriers beschermd moeten worden tegen hun instincten,
+                        geldt dit
+                        in het bijzonder voor de kleinere rassen. Die zijn geestelijk nog steeds gefocust op jagen boven
+                        en
+                        onder de grond, maar fysiek zijn ze niet meer uitgerust met de kracht en de tanden daarvoor.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Aan het andere uiteinde van het spectrum zijn er Terriers die te groot zijn om ondergronds te
+                        gaan. En
+                        als ze dat wel konden, dan zou je niet willen dat ze van doen kregen met wat er ook maar in een
+                        tunnel
+                        van een dergelijk formaat ligt. Als ongediertebestrijders onderscheiden ze zich, hoewel de
+                        rassen die
+                        een vechtend voorgeslacht hebben makkelijk in conflict kunnen komen met andere honden.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Er zijn ook een paar rassen die helemaal geen Terriers zijn, zoals de Russische Zwarte en de
+                        Tibetaanse,
+                        maar die om onduidelijke redenen de aanduiding 'Terrier' in hun rasbenaming hebben gekregen. En
+                        dan
+                        hebben we de Teckel, die geen Terrier is doch een brak, maar is ontstaan en gefokt om
+                        ondergronds te
+                        gaan en hetzelfde werk te doen. Daar tegenover hebben we de Schnauzers, alle drie de maten, die
+                        ongedierteverdelger en beschermhond zijn, maar niet bedoeld voor aardwerk.<br>
+                        Er kunnen niet veel Terriëreigenaren zijn, die hun kleine kwajongen niet eens voorbij hebben
+                        zien gaan
+                        aan het doel dat je als handler voor ogen had. Om zich vervolgens te storten in een soort van
+                        problemen
+                        waarvan je niet eens wist dat die bestonden.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Er zijn aspecten van de Terrieraard die zijn ingebakken en die zijn er niet uit te trainen.
+                        Diegenen van
+                        ons die gewend zijn geraakt aan meer coöperatieve hondenrassen kunnen door een
+                        ontkenningsperiode gaan,
+                        maar wij zijn degenen die ons moeten aanpassen. Zodra we alle gebruikelijke verwachtingen
+                        achterwege
+                        hebben gelaten, kunnen we - tot op zekere hoogte - onze Terriers trainen. Prikkelbaar als een
+                        derderangs
+                        beroemdheid wanneer ze worden dwarsgezeten, schitteren ze als we ze een beetje ruimte laten.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Om ons af te leren onszelf al te serieus te nemen, is de Terrier weergaloos.<br>
+                        Bron: 'Shooting Times', 7 december 2016<br>
+                        <a href="http://www.shootinguk.co.uk">http://www.shootinguk.co.uk</a><br>
+                        Vertaald door Alfred Ballast
+                    </p>
+                    <p class="text-gray-700 dark:text-slate-400 mb-8 mr-4 border rounded-lg p-4">
+                        Noot van de redactie: bovenstaand artikel is geschreven vanuit het gezichtspunt van een jager in
+                        Engeland, waar nog veel gewerkt wordt met de honden. De verschillende rassen kunnen daar nog
+                        ingezet
+                        worden voor het doel waarvoor ze oorspronkelijk gefokt zijn, daar waar hier nog slechts
+                        'nagespeelde'
+                        werkhondenproeven kunnen worden afgenomen. Het ondergrondse werk van onze Border Terrier, de
+                        jacht op
+                        vos en das, is in Nederland verboden. Sommige uitspraken in dit artikel kunnen ons wat vreemd
+                        lijken,
+                        maar het is beslist zo dat ook in onze lieve, schattige huisbordertjes nog steeds een echte
+                        Terrier
+                        (hoort te) zit(ten).
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</th:block>
+</html>

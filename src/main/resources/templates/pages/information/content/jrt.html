@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="content">
+    <div>
+        <header class="bg-yellow-700 text-white sticky top-0 z-10 gradient">
+            <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+                <h2 class="text-3xl font-medium mr-2">
+                    <a href="/">
+                        <span class="font-bold">Lumberlake</span>
+                    </a>
+                </h2>
+                <div>
+                    <button class="text-3xl md:hidden cursor-pointer relative w-8 h-8"
+                            id="hamburger-button">
+                        <div class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"
+                        ></div>
+                    </button>
+                    <nav aria-label="main" class="hidden md:block space-x-2 text-xl">
+                        <a class="hover:opacity-90" href="#art1">Intro</a>
+                        <a class="hover:opacity-90" href="#art2">Auto</a>
+                        <a class="hover:opacity-90" href="#art3">Thuis</a>
+                        <a class="hover:opacity-90" href="#art4">Bench</a>
+                        <a class="hover:opacity-90" href="#art5">Beweging</a>
+                        <a class="hover:opacity-90" href="#art6">Eten</a>
+                        <a class="hover:opacity-90" href="#art7">Riem</a>
+                        <a class="hover:opacity-90" href="#art8">Dierenarts</a>
+                        <a class="hover:opacity-90" href="#art9">Ziekte</a>
+                    </nav>
+                </div>
+            </section>
+
+            <!--Mobile Nav Menu -->
+            <section
+                    class="fixed inset-0 z-[50] h-dvh bg-gradient w-full text-5xl flex-col justify-content-center origin-top
+            animate-open-menu overflow-y-auto hidden pb-40 mt-20"
+                    id="mobile-menu">
+                <nav aria-label="mobile"
+                     class="flex flex-col min-h-screen items-center py-8">
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art1"
+                    >Intro</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art2"
+                    >Auto</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art3"
+                    >Thuis</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art4"
+                    >Bench</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art5"
+                    >Beweging</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art6"
+                    >Eten</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art7"
+                    >Riem</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art8"
+                    >Dierenarts</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art9"
+                    >Ziekte</a>
+
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#footer"
+                    >Legal</a>
+                </nav>
+            </section>
+        </header>
+        <!--Hero-->
+        <section
+                id="home"
+                class="gradient">
+            <div class="container mx-auto px-6 text-center py-20">
+                <!-- LOGO -->
+                <div>
+                    <section class="max-w-4xl mx-auto flex justify-between items-center mb-3">
+                        <img alt="design logo"
+                             class="sm:w-1/3 md:w-1/2 mx-auto rounded-full"
+                             src="/img/logo/logo.avif"/>
+                    </section>
+                </div>
+                <h2 class="mb-6 text-4xl font-bold text-center text-white">
+                    Welkom bij Lumberlake <br/>
+                    Jack Russell Terriër Kennel!
+                </h2>
+                <p class="my-4 text-2xl text-white">
+                    Op deze pagina lees je alles over de Jack Russell Terriër – een energiek, slim en nieuwsgierig
+                    hondenras dat
+                    barst van karakter. Je ontdekt waar dit ras vandaan komt, wat de typische eigenschappen zijn en hoe
+                    je het
+                    beste met een Jack Russell omgaat. Van opvoeding en socialisatie tot beweging, voeding en
+                    verzorging: we
+                    laten je zien wat er allemaal komt kijken bij het leven met deze levendige viervoeter. Zo weet je
+                    precies of
+                    de Jack Russell bij jouw gezin en levensstijl past.
+                </p>
+
+            </div>
+            <!-- bottom wave svg -->
+            <div class="relative -mt-12 lg:-mt-24">
+                <svg viewBox="0 0 1428 174" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-2.000000, 44.000000)" fill="var(--fill-color)" fill-rule="nonzero">
+                            <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                                  opacity="0.100000001"></path>
+                            <path
+                                    d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                                    opacity="0.100000001"
+                            ></path>
+                            <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                                  id="Path-4" opacity="0.200000003"></path>
+                        </g>
+                        <g transform="translate(-4.000000, 76.000000)" fill="var(--fill-color)" fill-rule="nonzero">
+                            <path
+                                    d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+                            ></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="container mx-auto px-6 py-20" id="art1">
+            <div class="flex items-center flex-wrap mb-20">
+                <div class="flex items-center flex-wrap mb-20 mt-20 pt-20">
+                    <div class="w-full md:w-1/2">
+                        <h2 class="text-3xl text-yellow-600 dark:text-yellow-600 font-bold mb-3 uppercase">
+                            JACK RUSSEL TERRIËR INFO
+                        </h2>
+                        <h3 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                            Hoe ga je daar mee om?
+                        </h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8">
+                            Je nieuwste vriend en trouwe viervoeter. Nu nog een puppie van net 8 weken oud.
+                            <br>
+                            Veel mensen vragen zich af: Hoe ga je daar mee om?
+                            <br>
+                            Er zijn veel verschillende situaties waar we in terecht komen, en hoe wij als mensen
+                            reageren
+                            heeft veel invloed op onze jonge hondjes. Derhalve hebben wij wat tips op een rijte gezet,
+                            om
+                            je op weg te helpen. Natuurlijk mag je ook altijd contact opnemen als je vragen hebt.
+                        </p>
+                    </div>
+                    <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                        <img
+                                alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                                class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                                src="/img/logo/logo.avif"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art2">
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <img
+                            alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                            class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                            src="/img/photobook/27.avif"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                        In de auto
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8">
+                        Neem je pup lekker op schoot. Alles is nog nieuw en vreemd voor hem, en ze ieren gelijk hoe ze
+                        ermee om moeten gaan. Zou je hem in een bench zetten, dan krijgt hij het gevoel dat hij er
+                        alleen voor staat, maar als je hem op schoot neemt, dan kan hij al leren dat jüj te vertrouwen
+                        bent en hem helpt.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Het kan zijn dat het pupje toch wat begint te piepen, maar dat kan betekenen dat hij even naar
+                        de toilet moet. Het beste is om hem dan een tuigje aan te doen (halsbandje kan ook, maar dit kan
+                        te
+                        strak zittenj en met hem naar een grasveld te gaan waar weinig of geen honden komen. Een pup
+                        moet bijna elk uur wel even zijn behoefte kwijt, vooral na een autoritje.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4" id="art3">
+                        Laat je pupje altijd even zijn behoefte doen vóórdat je ergens naar binnen gaat, dan kun je
+                        voorkomen dat het op een ongewenste plek wordt neer gelegd.
+                    </p>
+                    <h3 class="text-2xl font-bold mb-3">
+                        Eerste verkenning in je huis
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Bekend terrein voor jou, maar voor je vriendje een compleet nieuwe wereld. En dat zal hij
+                        willen leren kennen, dus gaat hij al snel op ontdekkingsreis. Hierin kun je hem gewoon z'n gang
+                        laten gaan. Laat hem even zien waar zijn mandje komt te staan door hem er in te zetten, mocht
+                        je hem optillen en knuffelen, zou je hem daarna ook in zijn mandje kunnen zetten.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Hetzelfde geldt voor zijn bench, zet hem ervoor neer, en begleid hem met je handen rustig naar
+                        binnen. Dan weet hij hoe hij er in is gekomen, dit maakt voor je hond een groot verschil of hij
+                        er
+                        zich op zijn gemak voelt, of dat hij het idee krijgt dat hij opgesloten wordt later.
+                        Hij zal snel moe zijn, vooral de eerste dagen, want alles maakt veel indruk op zijn jonge geest.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Daarom is het belangrijk dat je vooral je normale taakjes doet en je eigen ding doet, zonder te
+                        veel opwinding te maken. Want dit ziet je nieuwe hondje, en hij zal daarvan leren hoe iii wilt
+                        dat
+                        hij zich gedraagt. Dat betekent dat als je druk bent, dat hij zich ook druk zal gaan gedragen.
+                        in
+                        sommige gezinnen zijn kleine kinderen, die leuk kunnen spelen, maar je puppie zal zo'n druk
+                        gedrag gaan kopiëren en dan lijkt hij al snel hyperactief. Beloon goed gedrag en stimuleer hem
+                        daarin, terwill je ongewenst gedrag negeert. De pup weet nog niet wat hij wel en niet mag,
+                        bedrag wat beloont wordt zal hij eerder herhalen. Straf geven is voor het jonge diertje ook een
+                        beloning, al is het negatieve aandacht. Dat verschil kent hij niet, aandacht is aandacht, en dat
+                        waarmee hij aandacht krijgt zai hij gaan herhalen. Probeer er daarom voor te zorgen dat hij in
+                        een rustige omgeving opgroeid.
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20">
+                <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art4">
+                    <div class="w-full md:w-1/2">
+                        <section class="my-6">
+                            <h3 class="text-2xl font-bold mb-3">
+                                De Bench
+                            </h3>
+                            <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                                De bench is nooit een strafplek. Maak het er juist leuk voor hem door er wat brokjes in
+                                te
+                                leggen, niet meer dan vijf is genoeg, of een blokje kaas, of een knabbelding. Doe dit
+                                altijd als
+                                je
+                                hem er in zet. Zet hem voor de bench op de grond en begleid hem naar binnen, de plek
+                                waar jij
+                                net wat te snoepen hebt in gelegd. Is hij eenmaal binnen, dan het deurtje dicht, en
+                                voilà.
+                                In het begin zal hij protesteren, door te joenken of te krijsen. Het is HEEL BELANGRIJK
+                                daar
+                                NOOIT op te reageren, zelfs geen oogcontact! Roep ook nooit iets zoals: foei, stil of
+                                wat dan
+                                ook. Hij wilt jou aandacht, en het maakt hem niet uit hoe je reageert. Het kan moeilijk
+                                zijn,
+                                het
+                                is dan ook een terriër. Lastig, maar als je er een keer gehoor aan geeft zal hij er
+                                nooit meer
+                                mee
+                                ophouden.
+                            </p>
+                            <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                                Onze jonge vriend leert echter ontzettend snel; als je hem uit de bench haalt wanneer
+                                hij stil
+                                is,
+                                zelfs al is het maar voor 3 seconden, dan leert hij dat stilzijn wordt beloont. Het is
+                                aan te
+                                raden
+                                om dit te oefenen terwijl je thuis blijft, en hem niet voor het eerst in de bench te
+                                zetten als
+                                je je
+                                huis moet verlaten om wat voor reden maar ook.
+                            </p>
+                            <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                                Wanneer doe je hem in de bench? Voordat je zelf gaat slapen 's nachts, zo laat mogelijk;
+                                en
+                                overdag wanneer je even weg moet. Of wanneer er veel drukte is door een feestje of
+                                visite, dat
+                                is niet alleen makkelijker voor jezelf, maar ook de veiligste plek voor je vriend
+                                wanneer je hem
+                                niet in de gaten kan houden.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                        <img
+                                alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                                class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                                src="/img/photobook/4.avif"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20">
+                <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art5">
+                    <div class="w-full md:w-1/2">
+                        <section class="my-6">
+                            <h3 class="text-2xl font-bold mb-3">
+                                Beweging
+                            </h3>
+                            <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                                Een pupje is net zo kwetsbaar als een baby, alleen bij hem zijn z'n pootjes maar vijf
+                                centimeter
+                                lang, kleiner als bij een mens. Met die kleine pootjes kan hij geen grote stappen
+                                zetten. Voor
+                                elke pas die jij loopt heeft hij er wel tien nodig. Daardoor is de kans op overbelasting
+                                groot
+                                op zowel zijn gewrichten alsook zijn skelet. Van buiten is dit niet te zien maar uit
+                                zich wel in
+                                misvormde gewrichten of verdraaide pootjes, en elfs vroegtijdige atrose.
+                            </p>
+                            <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                                Vermijd daarom gladde vloeren, trappen, hellingen, en zelfs dat hij de bank op of af zou
+                                springen. Speel ook niet te lang met hem, een als je een balletje gooit waar hij
+                                achteraan rent,
+                                dan is twee keer ruim voldoende voor hem nu hij nog jong is. Wandei ook rustig met hem
+                                in de
+                                eerste maanden, want hij moet al zijn best doen om je bij te houden op zijn kleine
+                                pootjes. En
+                                als hij volwassen is? Zijn maag, darmen en blaas zijn veel kleiner als bij ons mensen,
+                                daardoor
+                                moet hij wel tot vijf keer per dag de mogelijkheid krijgen om zijn behoefte te doen.
+                            </p>
+                            <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                                Ook moet hij minimaal één maal per dag een goede lange wandeling hebben waar hij echt de
+                                beest
+                                mag uithangen, het is dan ook een echte hond, en heeft veel energie. Als hij zijnj
+                                energie niet
+                                kwijt kan, dan zal hij al snel druk worden binnens huis, dit is misschien niet gewenst.
+                                Als je
+                                merkt dat hij binnen drukker wordt, overweeg dan om langer met hem te wandelen als het
+                                kan.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                        <img
+                                alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                                class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                                src="/img/photobook/19.avif"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art6">
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <img
+                            alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                            class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                            src="/img/photobook/7.avif"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                        Eten
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8">
+                        Zorg ervoor dat ze altijd bij een bak fris drinkwater kunnen komen.
+                        Omdat het gezond is voor de opgroeiende hondjes krijgen ze lauwe geitenmelk bij hun ontbijt,
+                        een half theekopje is meer als genoeg. Ze zijn er ook dol op en drinken het graag. Even daarna
+                        kun je de pup een vleesmaaltijd aanbieden. Ze hebben al veel variatie gehad in hun voeding;
+                        zalm, eend, kalkoen, konijn, rund, kip en ga zo maar door.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Hierbij moet je wel even opletten dat je een goede kwaliteit geeft; Rodi Compleet of Smuldier
+                        (in het diepvries vak in de supermarkt te vinden)<br>
+                        Bij dierenwinkels worden ook Barf, Carnibest en Duck verkocht, dit zijn hele goede en gezonde
+                        maaltijden voor jonge hondjes.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        De kwaliteit van vers vlees is van onschatbare waarde, en hondenbrokken kunnen niet op tegen
+                        een goede vleesmaaltijd, daardoor kun je hẹt niet gebruiken als vervanging.<br>
+                        Hij mag wel brokken hebben dat is het probleem niet, geef er dan een handje van bij de
+                        maaltijd. Mocht hij diarree krijgen, is het goed mogelijk dat een dag alleen maar geitenmelk
+                        geven alles oplost, zo goed is het voor het beestje.
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20">
+                <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art7">
+                    <div class="w-full md:w-1/2">
+                        <section class="my-6">
+                            <h3 class="text-2xl font-bold mb-3">
+                                Riemen en tuigjes
+                            </h3>
+                            <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                                Tuigjes zijn beter voor een hondje dan een halsband, omdat de nek dan minder te verduren
+                                heeft. Als je niet voorzichtig bent wanneer je een halsband gebruikt kan het zijn dat je
+                                hondje
+                                er
+                                nekhernia aan overhoud. Daarom is het ook raadzaam geen flexielijn (uitrolbare lijn) te
+                                gebruiken todat hij een jaar oud is. Als je deze te vroeg gaat gebruiken dan leert hij
+                                dat hij
+                                moet
+                                trekken aan de lijn, want als hij trekt wordt hij beloond met meer ruimte. En al snel
+                                zal hij
+                                dan
+                                aan elke riem en lijn gaan trekken, want dan ga je het snelste waar hij naartoe wilt.
+                                Dit lijkt
+                                de
+                                eerste keer nog grappig, maar dat duurt nooit lang.
+                            </p>
+                            <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                                Ook is het heel slecht voor zijn groeiende
+                                pootjes. Verder stimuleert een flexie lijn impulsief gedrag, wat vaak niet wordt
+                                gewaardeert
+                                door het baasje, en dan krijg je geen mooie relaxed baas-hond relatie. Als hij een jaar
+                                oud is
+                                en
+                                de nodige opvoeding heeft gehad, kan hij altijd nog aan een flexie. Je kunt er nooit te
+                                laat mee
+                                beginnen, wel te vroeg.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                        <img
+                                alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                                class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                                src="/img/photobook/32.avif"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art8">
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <img
+                            alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                            class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                            src="/img/photobook/22.avif"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                        Dierenarts
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8">
+                        Breng hem binnen vier tot vijf dagen na aankoop naar de dierenarts. Stel je hondje even voor,
+                        laat hem in het systeem zetten en vraag gelijk of ze hem willen checken. Hiermee kun je zelf
+                        controleren of je een goed hondje hebt gekocht. Vraag ook gelijk om de vierde wormkuur (de 8
+                        weken kuur) en maak ook gelijk een afspraak voor de tweede enting die bij 9 weken moet
+                        plaats vinden.
+                    </p>
+                    <h3 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                        Entschema
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        De fokker voorziet in de enting die op de 6 weken moet plaats vinden. De nieuwe eigenaar
+                        moet die voor 9 weken en 12 weken voorzien. Deze zijn zeer belangrijk! Ga ook voor de enting
+                        als ze 1 jaar oud zijn. Met titerbepaling is vast te stellen of je ze moet blijven enten of
+                        juist niet,
+                        enten is niet zonder risico en onnodig vaak herhalen kan schadelijk zijn. Het is aan te bevelen
+                        een titerbepaling te vragen als hem na het eerste jaar nog steeds wilt enten.
+                        Tevens mag de Rabiës enting gegeven worden vanaf 12 weken, maar vraag eerst voor advies
+                        hiervoor. Vaak is het alleen nodig als de pup naar het buitenland gaat, en is het ook maar drie
+                        jaar geldig.
+                    </p>
+                    <h3 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                        Wormkuren
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Op 2, 4 en 6 weken heeft je pup al ontworming gekregen bij de fokker. Op 8 weken heeft hij er
+                        weer een nodig. Kijk in zijn paspoort voor een schema van de rest van zijn kuren.
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art9">
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <img
+                            alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                            class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                            src="/img/photobook/23.avif"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                        Ziekte
+                    </h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8">
+                        De pup is gezond en sterk, toch kan hij ziek worden. Hij is nog maar klein en kwetsbaar probeer
+                        daarom op te letten met het volgende:
+                    </p>
+                    <ul class="list-disc ml-6 space-y-2 mb-8">
+                        <li>Tocht, koude en nattigheid, regen en wind. Droog hem af met een warme handdoek.
+                        </li>
+                        <li>Oververmoeidheid. Bescherm hem tegen te veel activiteiten
+                        </li>
+                        <li>Te koud eten (bv niet genoeg ontdooid). controleer de temperatuur met je pink.
+                        </li>
+                        <li>Troep van de straat eten. (Eendenpoep, paardenpoep, kadaver etc.) Let op waar je loopt.
+                        </li>
+                        <li>Gevaarlijk of giftig: Chocolade, druiven, kippenbotjes en karbonade botjes.
+                        </li>
+                    </ul>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8">
+                        Deze dingen kunnen diarree en/of overgeven veroorzaken. Het beste kun je hem dan wat
+                        geitenmelk aanbieden, en hem lekker warm houden. Mocht het onverhoeds toch te lang
+                        aanhouden ga dan dezelfde dag nog met hem naar de dierenarts. Ook als de pup slapjes wordt
+                        en niet wilt eten of drinken of bij twijfel gelijk een deskundige raadplegen. Probeer bij puppen
+                        en jonge hondjes een antibiotica te vermijden, want dit kan net zo veel kwaad als goed doen in
+                        hun ontwikkelende lichaam.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</th:block>
+</html>

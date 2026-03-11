@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="home">
+    <th:block th:insert="~{fragments/home/body/hero :: hero}"></th:block>
+    <th:block th:insert="~{fragments/home/body/services :: services}"></th:block>
+    <th:block th:insert="~{fragments/home/body/availability :: availability}"></th:block>
+    <th:block th:insert="~{fragments/home/body/action :: action}"></th:block>
+    <th:block th:insert="~{fragments/home/body/description :: description}"></th:block>
+    <th:block th:insert="~{fragments/home/body/about :: about}"></th:block>
+    <th:block th:insert="~{fragments/home/body/contact :: contact}"></th:block>
+    <th:block th:insert="~{fragments/home/body/testimonials :: testimonials}"></th:block>
+    <th:block th:insert="~{fragments/footer/home/footer :: footer}"></th:block>
+    <th:block th:insert="~{fragments/images-bucket/bucket :: bucket}"></th:block>
+    <th:block th:insert="~{fragments/structured-data/reviews :: reviews-json}"></th:block>
+</th:block>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="content">
+    <div class="flex items-center flex-wrap mb-20 min-h-[80vh]">
+        <div class="w-full sm:w-1/2 mx-auto p-4" id="mathilda-dame">
+            <img loading="lazy" width="1200" height="800"
+                 alt="Mathilda - LumberLake The Road to Freedom Jack Russell teefje van Lumberlake kennel"
+                 class="rounded-lg border-2 border-yellow-600 sm:max-w-full sm:h-auto "
+                 src="./img/dogs/mathilda-stand.avif">
+            <span class="text-center text-neutral-900 dark:text-neutral-100 text-xs">Mathilda - LumberLake The Road to Freedom</span>
+        </div>
+        <div class="w-full md:w-1/2">
+            <div class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                Mathilda
+            </div>
+            <div class="text-2xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                LumberLake The Road to Freedom | 01.06.2019
+            </div>
+            <p class="italic text-gray-600 dark:text-slate-300 mb-2">
+                ECVO vrij
+                | Patella %
+                | PLL normaal door DNA
+                | Levershunt vrij
+            </p>
+            <p class="text-gray-600 dark:text-slate-300 mb-8">
+                <br>VB 1 3 x
+                <br>VB 2 1x
+                <br>BESTE PUP 2 x
+            </p>
+            <p class="text-gray-600 dark:text-slate-300 mb-8">
+                Fokgeschiktheidsaankeuring door
+                Jack Russell Vrienden vereniging
+            </p>
+        </div>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "IndividualAnimal",
+                "name": "Mathilda - LumberLake The Road to Freedom",
+                "alternateName": "LumberLake The Road to Freedom",
+                "description": "Mathilda is een raszuivere Jack Russell teef met een vriendelijk karakter, geboren op 01-06-2019. Gezond verklaard (ECVO vrij, Patella %, PLL normaal door DNA, Levershunt vrij) en fokgeschikt bevonden door de Jack Russell Vrienden Vereniging.",
+                "image": "https://lumberlake.nl/img/dogs/mathilda-stand.avif",
+                "gender": "Female",
+                "breed": "Jack Russell Terrier",
+                "birthDate": "2019-06-01",
+                "url": "https://lumberlake.nl/#mathilda-dame",
+                "identifier": "mathilda-the-road-to-freedom",
+                "award": [
+                    "VB 1 (3x)",
+                    "VB 2 (1x)",
+                    "Beste Pup (2x)"
+                ],
+                "healthCondition": [
+                    "ECVO vrij",
+                    "Patella %",
+                    "PLL normaal door DNA",
+                    "Levershunt vrij"
+                ],
+                "parentOrganization": {
+                    "@type": "LocalBusiness",
+                    "name": "Lumberlake Jack Russell Kennel",
+                    "url": "https://lumberlake.nl",
+                    "image": "https://lumberlake.onrender.com/img/logo/logo/logo-small.avif",
+                    "telephone": "+31 6 3402 4746",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Manresastraat 8",
+                        "postalCode": "5915VK",
+                        "addressLocality": "Venlo",
+                        "addressCountry": "NL"
+                    }
+                }
+            }
+        </script>
+    </div>
+</th:block>
+</html>

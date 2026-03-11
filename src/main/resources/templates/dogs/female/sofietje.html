@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="content">
+    <div class="flex items-center flex-wrap mb-20 md:min-h-[80vh]">
+        <div class="w-full md:w-1/2" id="sofietje-dame">
+            <div class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                Sofietje
+            </div>
+            <div class="text-2xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                Star Pride United | 28.10.2021
+            </div>
+            <p class="italic text-gray-600 dark:text-slate-300 mb-2">
+                ECVO vrij
+                | Patella %
+                | PLL normaal door DNA
+                | Levershunt vrij
+            <div id="stats-sofietje" class=" m-8">
+                <div class="Gold flex flex-col items-center mx-auto w-72 md:w-72 h-auto pt-5 pb-7 border border-gray-200 rounded-lg space-y-8 shadow-lg">
+                    <div class="flex flex-col text-center space-y-1">
+                        <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+                            Sofietje's Prestaties
+                        </h2>
+                        <p class="text-slate-800 text-sm">
+                            Star Pride United
+                        </p>
+                        <div class="space-y-2" id="prestaties-list-sofietje">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full mx-auto sm:w-1/2 m-4">
+            <img loading="lazy" width="1200" height="800"
+                 alt="Sofie - Jack Russell teefje van Lumberlake kennel"
+                 class="rounded-lg border-2 border-yellow-600 sm:max-w-full sm:h-auto shadow-2xl "
+                 src="./img/dogs/sofie.avif">
+            <span class="text-center text-neutral-900 dark:text-neutral-100 text-xs">Sofietje - Star Pride United</span>
+        </div>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "IndividualAnimal",
+                "name": "Sofietje - Star Pride United",
+                "alternateName": "Star Pride United",
+                "description": "Sofietje is een raszuivere Jack Russell teef, geboren op 28-10-2021. Gezond verklaard (ECVO vrij, Patella %, PLL normaal door DNA, Levershunt vrij).",
+                "image": "https://lumberlake.nl/img/dogs/sofie.avif",
+                "gender": "Female",
+                "breed": "Jack Russell Terrier",
+                "birthDate": "2021-10-28",
+                "url": "https://lumberlake.nl/#sofietje-dame",
+                "identifier": "sofietje-star-pride-united",
+                "award": [
+                    "VB4",
+                    "VB4",
+                    "ZG 2x",
+                    "ZG2",
+                    "U3",
+                    "U2",
+                    "ZG1",
+                    "U1 2x"
+                ],
+                "healthCondition": [
+                    "ECVO vrij",
+                    "Patella %",
+                    "PLL normaal door DNA",
+                    "Levershunt vrij"
+                ],
+                "parentOrganization": {
+                    "@type": "LocalBusiness",
+                    "name": "Lumberlake Jack Russell Kennel",
+                    "url": "https://lumberlake.nl",
+                    "image": "https://lumberlake.onrender.com/img/logo/logo-small.avif",
+                    "telephone": "+31 6 3402 4746",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Manresastraat 8",
+                        "postalCode": "5915VK",
+                        "addressLocality": "Venlo",
+                        "addressCountry": "NL"
+                    }
+                }
+            }
+        </script>
+    </div>
+</th:block>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="content">
+    <div>
+        <!--NAV -->
+        <header class="bg-yellow-700 text-white sticky top-0 z-10 gradient">
+            <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+                <h2 class="text-3xl font-medium mr-2">
+                    <a href="/">
+                        <span class="font-bold">Lumberlake</span>
+                    </a>
+                </h2>
+                <div>
+                    <button class="text-3xl md:hidden cursor-pointer relative w-8 h-8"
+                            id="hamburger-button">
+                        <div class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"
+                        ></div>
+                    </button>
+                    <nav aria-label="main" class="hidden md:block space-x-8 text-xl">
+                        <a class="hover:opacity-90" href="#art1"> carnivoor</a>
+                        <a class="hover:opacity-90" href="#art2"> botten</a>
+                        <a class="hover:opacity-90" href="#art3"> medicijnen</a>
+                        <a class="hover:opacity-90" href="#art4"> voer</a>
+                        <a class="hover:opacity-90" href="#art5"> samenstellen</a>
+                        <a class="hover:opacity-90" href="#art6"> vlees</a>
+                    </nav>
+                </div>
+            </section>
+
+            <!--Mobile Nav Menu -->
+            <section
+                    class="fixed inset-0 z-[50] h-dvh bg-gradient w-full text-5xl flex-col justify-content-center origin-top
+            animate-open-menu overflow-y-auto hidden pb-40 mt-20"
+                    id="mobile-menu">
+                <nav aria-label="mobile"
+                     class="flex flex-col min-h-screen items-center py-8">
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art1"
+                    >carnivoor</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art2"
+                    >botten</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art3"
+                    >medicijnen</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art4"
+                    >voer</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art5"
+                    >samenstellen</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#art6"
+                    >vlees</a>
+                    <a class="w-full text-center py-6 hover:opacity-80" href="#footer"
+                    >Legal</a>
+                    <a class="hover:opacity-90" href="https://www.facebook.com/lumberlake.jackrussells"><i
+                            class="fab fa-facebook text-blue-400"></i>facebook</a>
+
+                </nav>
+            </section>
+        </header>
+        <!--Hero-->
+        <section
+                id="home"
+                class="gradient">
+            <div class="container mx-auto px-6 text-center py-20">
+                <!-- LOGO -->
+                <div>
+                    <section class="max-w-4xl mx-auto flex justify-between items-center mb-3">
+                        <img alt="design logo"
+                             class="sm:w-1/3 md:w-1/2 mx-auto rounded-full"
+                             src="/img/logo/logo.avif"/>
+                    </section>
+                </div>
+                <h2 class="mb-6 text-4xl font-bold text-center text-white">
+                    Welkom bij Lumberlake <br/>
+                    Jack Russell Terriër Kennel!
+                </h2>
+                <h3 class="my-4 text-2xl text-white">
+                    Deze pagina gaat over juiste voeding bij honden.
+                </h3>
+            </div>
+            <!-- bottom wave svg -->
+            <div class="relative -mt-12 lg:-mt-24">
+                <svg viewBox="0 0 1428 174" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(-2.000000, 44.000000)" fill="var(--fill-color)" fill-rule="nonzero">
+                            <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                                  opacity="0.100000001"></path>
+                            <path
+                                    d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                                    opacity="0.100000001"
+                            ></path>
+                            <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                                  id="Path-4" opacity="0.200000003"></path>
+                        </g>
+                        <g transform="translate(-4.000000, 76.000000)" fill="var(--fill-color)" fill-rule="nonzero">
+                            <path
+                                    d="M0.457,34.035 C57.086,53.198 98.208,65.809 123.822,71.865 C181.454,85.495 234.295,90.29 272.033,93.459 C311.355,96.759 396.635,95.801 461.025,91.663 C486.76,90.01 518.727,86.372 556.926,80.752 C595.747,74.596 622.372,70.008 636.799,66.991 C663.913,61.324 712.501,49.503 727.605,46.128 C780.47,34.317 818.839,22.532 856.324,15.904 C922.689,4.169 955.676,2.522 1011.185,0.432 C1060.705,1.477 1097.39,3.129 1121.236,5.387 C1161.703,9.219 1208.621,17.821 1235.4,22.304 C1285.855,30.748 1354.351,47.432 1440.886,72.354 L1441.191,104.352 L1.121,104.031 L0.457,34.035 Z"
+                            ></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+
+        <!-- Services -->
+        <section class="container mx-auto px-6 py-20" id="art1">
+            <div class="flex items-center flex-wrap mb-20">
+                <div class="w-full md:w-1/2">
+                    <section class="my-6">
+                        <h3 class="text-2xl font-bold mb-3">De hond; een carnivoor</h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Onze huishond is een echte carnivoor. Dat bewijst het gebit en ook het darmkanaal.
+                            Het gebit bestaat onder andere uit scherpe knipkiezen, om hele beesten mee naar
+                            binnen te werken. Ze kunnen geen zijwaartse bewegingen maken met hun kaken,
+                            zoals wij dat kunnen. Die zijwaartse bewegingen zijn nodig om harde plantendelen
+                            fijn te kunnen malen en te vermengen met speeksel om de zetmeel vertering alvast
+                            te beginnen. In ons speeksel zit een enzym, amylase, dat gebruikt wordt om zetmeel
+                            te verteren. Honden hebben dat nauwelijks. Ze hebben hoegenaamd geen amylase
+                            in hun speeksel. Dat is een duidelijk teken dat ze niet gemaakt zijn om zetmeel te
+                            eten.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Dat gebrek aan amylase zorgt ervoor dat honden die wel zetmeel eten gemakkelijk
+                            tandsteen krijgen. Ik vergelijk het altijd met het eten van een Ligakoek. Alles plakt
+                            aan de tanden. Brokken helpen dus niet tegen tandsteen, zoals veel mensen
+                            denken. Het is wel zo dat blikvoer, waarin ook zetmeel zit, veel sneller tandsteen
+                            geeft dan brokken. Eigenlijk is het enige wat goed werkt tegen tandsteen: het eten
+                            van echte botten. Dus kipkarkassen, kippennekken, duiven, kwartels, haas en
+                            konijn(-karkassen).
+                        </p>
+                    </section>
+                </div>
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <img
+                            alt="Lumberlake logo met drie Jack Russell Terriërs en tekst 'Lumberlake Jack Russell Terrier' op witte achtergrond"
+                            class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                            src="/img/photobook/2.avif"
+                    />
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art2">
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <img
+                            alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                            class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                            src="/img/photobook/3.avif"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <section class="my-6">
+                        <h3 class="text-2xl font-bold mb-3">Botten?</h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Veel mensen hebben geleed dat botten gevaarlijk zijn omdat de scherp
+                            kunnen zijn of kunnen vastlopen in het maag-darmkanaal. Dat klopt ten dele.
+                            Gebakken of gekookte botten kunnen inderdaad scherp zijn maar rauwe botten zijn
+                            veel elastischer. Botten moeten dus ten allen tijde rauw gevoerd worden en nooit
+                            gekookt/verhit!
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Ook moeten botten niet te hard zijn. Poten van kalveren/koeien zijn veel te groot en
+                            te zwaar. Dus ook schenkels. Dan kunnen honden hun tanden breken of ze raken
+                            verstopt doordat ze te veel bot binnenkrijgen.
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20" id="art3">
+                <div class="w-full md:w-1/2">
+                    <section class="my-6">
+                        <h3 class="text-2xl font-bold mb-3">Bij medicijnen</h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Ook honden die op medicijnen staan als pijnstillers/prednison of maagzuurremmers
+                            kunnen zorgen voor een verminderde vertering van het bot waardoor er splinters in
+                            de ontlasting terechtkomen. Dat komt doordat botten in de maag verteerd worden.
+                            Het bot blijft in de maag tot het door het maagzuur in een soort vloeibare brij
+                            veranderd is en pas dan gaat het door naar de darmen. Botten zijn dus ook heel
+                            goed voor honden die "te veel maagzuur" hebben. Ik ben namelijk van mening dat te
+                            veel maagzuur niet bestaat, maar dat het maagzuur te weinig te doen heeft.
+                            Brokken bestaan voor het grootste deel uit koolhydraten en die verteren voornamelijk
+                            in de darmen en blijven maar heel kort in de maag. Als een hond brokken eet dan is
+                            de maag weer snel leeg en dan kan er zuurbranden ontstaan.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Ook de darmen zijn kort. Ze zijn gemaakt om eiwitten te verteren en geen plantaardig
+                            materiaal. Plantaardig materiaal vergt een lang maag-darmkanaal met speciale
+                            plekken (pens, blinde darm) waar het materiaal lang kan blijven om verteerd te
+                            worden door bacteriën. Honden hebben dat niet en kunnen dus ook weinig met
+                            onverhit plantaardig materiaal. Het enige plantaardige materiaal dat wolven
+                            binnenkrijgen is de darminhoud van hun prooidieren. En die bestaat niet zozeer uit
+                            koolhydraten maar meer uit gefermenteerde groene bladeren/gras/kruiden. Vooral
+                            veel vezels dus en weinig calorieën. Ze krijgen op die manier niet meer dan 2-10%
+                            voorverteerd plantaardig materiaal binnen.
+                        </p>
+                    </section>
+                </div>
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <img
+                            alt="Lumberlake logo met drie Jack Russell Terriërs en tekst 'Lumberlake Jack Russell Terrier' op witte achtergrond"
+                            class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                            src="/img/photobook/4.avif"
+                    />
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art4">
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <img
+                            alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                            class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                            src="/img/photobook/5.avif"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <section class="my-6">
+                        <h3 class="text-2xl font-bold mb-3">Over brokken en blikvoer</h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            En wat voeren wij onze honden? Brokken en blikvoer met als hoofdbestanddeel
+                            granen/groenten/soja.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Maar het allerbeste is om de hond te geven wat hij/zij eigenlijk zou moeten eten:
+                            vlees, orgaanvlees, boten en rauwe gemalen groenten om de darminhoud na te
+                            bootsen. Eigenlijk proberen we om een prooidier na te maken.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Complete diepvriesvoeding bevat alles wat uw hond nodig heeft aan vitamines en
+                            mineralen. Dus dat is prima om uw hond te geven. Ik adviseer wel om smaken en
+                            soorten af te wisselen, dit om eventuele tekorten tegen te gaan. Er is alleen een
+                            aspect dat ontbreekt bij complete diepvriesvoeding: ze hoeven niet te kauwen. En
+                            juist dat kauwen is erg goed voor onze carnivoren. Het haalt tandsteen weg,
+                            masseert het tandvlees en bevordert te vertering. Ook werkt het mentaal erg goed.
+                            Honden die kauwen zijn rustiger en relaxter. Het eten is veel bevredigender.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Als u echt alles zelf wilt samenstellen zijn er een paar regels die u in acht moet
+                            nemen.
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20" id="art5">
+                <div class="w-full md:w-1/2">
+                    <section class="my-6">
+                        <h3 class="text-2xl font-bold mb-3">Zelf samenstellen</h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Geef 3-4 keer per week botten, wil uw hond geen botten eten zorg dan voor
+                            een andere calciumbron, tot poeder gemalen eierschalen of een supplement
+                            met calcium er in. Volwassen honden krijgen niet gauw te veel bot, dus meer
+                            mag ook. Houd wel in de gaten dat de ontlasting erg hard kan worden van
+                            veel bot. Dat verschilt per hond hoe snel dat gebeurt. De ontlasting mag wel
+                            hard zijn maar moet er wel gemakkelijk uit kunnen, dus zonder al te veel
+                            persen.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Een mooie verdeling is: 20-30% bot (of 40-60% bot met vlees er aan), 10-20%
+                            orgaanvlees (hart, lever, pens, niertjes), 50-60% spiervlees en 10-30%
+                            groenten. Ei en vis zijn ook erg gezond.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Het is ook mogelijk om muizen, ratten, kwartels, duif, eendagskuikens,
+                            konijnen en andere hele prooidieren te voeren. Dat zijn dieren die met orgaan
+                            en al geleverd worden en vaak ook nog met vacht/veren er aan. Die kunt u als
+                            compleet beschouwen.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            - Zorg dat u diersoorten afwisselt, niet alleen maar kip en rund. Probeer 4
+                            diersoorten regelmatig af te wisselen en af en toe wat anders. Afhankelijk van
+                            waar u tegenaan loopt. Kijk eens op de markt wat de poelier allemaal heeft of
+                            zoek via internet naar bedrijven die speciaal voor huisdieren van alles aan
+                            huis leveren.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            - De maaltijden hoeven niet allemaal compleet te zijn. Dus u kunt maaltijden
+                            met spiervlees en bot bijvoorbeeld afwisselen met maaltijden met groenten en
+                            orgaanvlees. Of spiervlees met groenten. Geef geen kale botten zonder
+                            spiervlees eraan.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Honden die af moeten vallen kunnen relatief veel pens met rauwe gemalen groenten
+                            krijgen. Dat vult de maag, voorkomt hongergevoel en bevat weinig calorieën.
+                            Met de pot mee-eten is ook niet verkeerd, maar gekookte groenten, jus en rijst of
+                            pasta bevatten erg veel calorieen en zullen uw hond snel te dik maken. Rauw is
+                            beter.
+                        </p>
+                    </section>
+                </div>
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <img
+                            alt="Lumberlake logo met drie Jack Russell Terriërs en tekst 'Lumberlake Jack Russell Terrier' op witte achtergrond"
+                            class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                            src="/img/photobook/6.avif"
+                    />
+                </div>
+            </div>
+            <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art6">
+                <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                    <img
+                            alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                            class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                            src="/img/photobook/10.avif"
+                    />
+                </div>
+                <div class="w-full md:w-1/2">
+                    <section class="my-6">
+                        <h3 class="text-2xl font-bold mb-3">Rauw of verhit?</h3>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Een van de redenen dat rauw beter is dan verhit, zijn de bacteriën die er in zitten.
+                            Veel mensen schrikken van bacterien en denken alleen maar aan de slechte
+                            bacteriën zoals Salmonella, E.Coli of Campylobacter. Maar er zitten ook veel goede
+                            bacterien in vlees.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Tegenwoordig zijn er veel drankjes met probiotica op de markt voor mensen. Die
+                            moet je elke dag drinken om je weerstand te bevorderen. Op de reclame hoor je ze
+                            dan ook zeggen: 70% van je weerstand zit in je buik. Dat klopt wel. De darmen
+                            bevatten erg veel lymfeweefsel waarin afweercellen zitten. Deze cellen fungeren als
+                            een soort pootwachters om te zien wat wel het lichaam in mag en wat niet. Als de
+                            darmen veel verschillende bacteriën bevatten dan gaan deze cellen beter
+                            functioneren en wordt de weerstand tegen virussen en bacterien beter.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            De goede bacteriën zorgen er ook voor dat verkeerde bacteriën zich niet vast kunnen
+                            hechten aan de darmwand en schade kunnen veroorzaken. Dus honden die rauw
+                            vlees eten kunnen erg goed omgaan met verkeerde bacteriën als Salmonella. Een
+                            wolf kan ook een prooidier begraven en na drie weken opgraven en opeten. Daar
+                            kunnen ze prima tegen, zonder ziek te worden.
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            De beloning voor al deze moeite is groot: mooie vachten, schone tanden en slanke,
+                            actieve honden. En minder vlooien en virusinfecties. Weinig en stevige ontlasting die
+                            veel minder stinkt en wat minder zichtbaar is, maar wel merkbaar in de portemonnee:
+                            een betere weerstand!
+                        </p>
+                        <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                            Mocht u meer willen weten over zelf gezonde eten samenstellen voor uw hond: ik
+                            heb een eenvoudig boekje er over geschreven "Voer voor Carnivoren" heet het.
+                        </p>
+                        <ul>
+                            <li>
+                                Veel eetplezier voor de honden,
+                            </li>
+                            <li>
+                                Tannetje Koning, dierenarts
+                            </li>
+                            <li>
+                                <a href="https://www.ecoshop-voor-dieren.nl/boeken/VoerVoorCarnivoren" target="_blank">
+                                    <button class="bg-white text-black font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider">
+                                        Voer voor Carnivoren
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</th:block>
+</html>

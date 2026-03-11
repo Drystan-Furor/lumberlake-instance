@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="content">
+    <div class="flex items-center flex-wrap mb-20 md:min-h-[80vh]">
+        <div class="w-full md:w-1/2">
+            <div class="text-3xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                Cooper
+            </div>
+            <div class="text-2xl text-gray-800 dark:text-slate-50 font-bold mb-3">
+                Biber Happy Flame 27.01.2020
+            </div>
+            <p class="italic text-gray-600 dark:text-slate-300 mb-8">
+                ECVO vrij
+                | Patella %
+                | PLL normaal door DNA
+                | Levershunt vrij
+            </p>
+            <p class="text-gray-600 dark:text-slate-300 mb-8">
+                Fokgeschiktheidskeurmerk van de Jack Russell Vrienden Vereniging.
+            </p>
+        </div>
+        <div class="w-full mx-auto sm:w-1/2 p-4">
+            <img loading="lazy" width="1200" height="800"
+                 alt="Cooper - Jack Russell reutje van Lumberlake kennel"
+                 class="rounded-lg border-2 border-yellow-600 sm:max-w-full sm:h-auto shadow-2xl "
+                 src="./img/dogs/cooper-stand.avif">
+            <span class="text-center text-neutral-900 dark:text-neutral-100 text-xs">Cooper - Biber Happy Flame</span>
+        </div>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "IndividualAnimal",
+                "name": "Cooper - Biber Happy Flame",
+                "alternateName": "Biber Happy Flame",
+                "description": "Cooper is een raszuivere Jack Russell reu met een vriendelijk karakter. Geboren op 27-01-2020. Gezond verklaard (ECVO vrij, Patella %, PLL normaal door DNA, Levershunt vrij) en voorzien van fokgeschiktheidskeurmerk van de Jack Russell Vrienden Vereniging.",
+                "image": "https://lumberlake.nl/img/dogs/cooper-stand.avif",
+                "gender": "Male",
+                "breed": "Jack Russell Terrier",
+                "birthDate": "2020-01-27",
+                "url": "https://lumberlake.nl/#cooper-sire",
+                "identifier": "cooper-biber-happy-flame",
+                "award": [],
+                "healthCondition": [
+                    "ECVO vrij",
+                    "Patella %",
+                    "PLL normaal door DNA",
+                    "Levershunt vrij"
+                ],
+                "parentOrganization": {
+                    "@type": "LocalBusiness",
+                    "name": "Lumberlake Jack Russell Kennel",
+                    "url": "https://lumberlake.nl",
+                    "image": "https://lumberlake.onrender.com/img/logo/logo-small.avif",
+                    "telephone": "+31 6 3402 4746",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Manresastraat 8",
+                        "postalCode": "5915VK",
+                        "addressLocality": "Venlo",
+                        "addressCountry": "NL"
+                    }
+                }
+            }
+        </script>
+    </div>
+</th:block>
+</html>

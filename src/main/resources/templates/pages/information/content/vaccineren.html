@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="content">
+    <!--NAV -->
+    <header class="bg-yellow-700 text-white sticky top-0 z-10 gradient">
+        <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+            <h2 class="text-3xl font-medium mr-2">
+                <a href="/">
+                    <span class="font-bold">Lumberlake</span>
+                </a>
+            </h2>
+            <div>
+                <button class="text-3xl md:hidden cursor-pointer relative w-8 h-8"
+                        id="hamburger-button">
+                    <div class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500"
+                    ></div>
+                </button>
+                <nav aria-label="main" class="hidden md:block space-x-8 text-xl">
+                    <a class="hover:opacity-90" href="#art1">Inleiding</a>
+                    <a class="hover:opacity-90" href="#art2">Waarom</a>
+                    <a class="hover:opacity-90" href="#art3">Medisch</a>
+                    <a class="hover:opacity-90" href="#art4">Bijwerkingen</a>
+                    <a class="hover:opacity-90" href="#art5">Vaccins</a>
+                    <a class="hover:opacity-90" href="#art6">Bescherming</a>
+                    <a class="hover:opacity-90" href="#art7">Leptospirose</a>
+                    <a class="hover:opacity-90" href="#art8">Titerbepaling</a>
+                    <a class="hover:opacity-90" href="#art9">Wettelijk</a>
+                </nav>
+            </div>
+        </section>
+
+        <!--Mobile Nav Menu -->
+        <section
+                class="fixed inset-0 z-[50] h-dvh bg-gradient w-full text-5xl flex-col justify-content-center origin-top
+            animate-open-menu overflow-y-auto hidden pb-40 mt-20"
+                id="mobile-menu">
+            <nav aria-label="mobile"
+                 class="flex flex-col min-h-screen items-center py-8">
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art1"
+                >Inleiding</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art2"
+                >Waarom</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art3"
+                >Medisch</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art4"
+                >Bijwerkingen</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art5"
+                >Vaccins</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art6"
+                >Bescherming</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art7"
+                >Leptospirose</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art8"
+                >Titerbepaling</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#art9"
+                >Wettelijk</a>
+                <a class="w-full text-center py-6 hover:opacity-80" href="#footer"
+                >Legal</a>
+            </nav>
+        </section>
+    </header>
+    <!--Hero-->
+    <section
+            id="home"
+            class="gradient">
+        <div class="container mx-auto px-6 text-center py-20">
+            <!-- LOGO -->
+            <div>
+                <section class="max-w-4xl mx-auto flex justify-between items-center mb-3">
+                    <img alt="design logo"
+                         class="sm:w-1/3 md:w-1/2 mx-auto rounded-full"
+                         src="/img/logo/logo.avif"/>
+                </section>
+            </div>
+            <h2 class="mb-6 text-4xl font-bold text-center text-white">
+                Welkom bij Lumberlake <br/>
+                Jack Russell Terriër Kennel!
+            </h2>
+            <h3 class="my-4 text-2xl text-white">
+                Deze pagina bevat een artikel van Tannetje Koning over vaccineren.
+            </h3>
+        </div>
+        <th:block th:insert="~{fragments/elements/waves/bottom.html :: bottom-wave-svg}"></th:block>
+    </section>
+
+
+    <!-- Services -->
+    <section class="container mx-auto px-6 py-20" id="art1">
+        <div class="flex items-center flex-wrap mb-20">
+            <div class="w-full">
+                <section class="my-6">
+                    <h3 class="text-2xl font-bold mb-3">Vaccineren, zin of onzin?</h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Langzaam maar zeker komen er steeds meer geluiden, voornamelijk via Internet, dat
+                        we onze honden veel te veel zouden vaccineren. Omdat het niet altijd gemakkelijk is
+                        daarover goede en betrouwbare informatie te vinden zal ik in het kort uitleggen wat
+                        er allemaal meespeelt in de beslissing om al dan niet te vaccineren.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art2">
+            <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                <img
+                        alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                        class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                        src="/img/photobook/30.avif"
+                />
+            </div>
+            <div class="w-full md:w-1/2">
+                <section class="my-6">
+                    <h3 class="text-2xl font-bold mb-3">Waarom vaccineren?</h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Waarom zouden we eigenlijk een vaccinatie geven?
+                        De meeste vaccins zijn voor virusziekten. Een enkele (leptospirose en kennelhoest)
+                        voor een bacterie. Tegen virusziekten hebben we geen medicijnen. Bacteriën kunnen
+                        we met antibiotica te lijf. Dat is omdat bacteriën in de weefsels of in het bloed zitten.
+                        Daar kunnen ook antibiotica komen en dus kunnen we ze doodmaken. Virussen
+                        kruipen in de cellen. Ze hebben die cellen nodig om zich voort te planten. Virussen
+                        hebben namelijk geen eigen voortplantingssysteem en dus gebruiken ze die van de
+                        cellen waar ze in zitten. Dan vermenigvuldigen ze zich tot de cel stuk knapt en dan
+                        verspreiden ze zich heel snel naar de buurcellen en zo maken ze heel veel cellen
+                        kapot. Om virussen te bestrijden ben je dus afhankelijk van je eigen afweersysteem.
+                        Virussen hebben een voorkeur voor een bepaalde diersoort en ook nog eens voor
+                        bepaalde cellen in die diersoort. Parvovirus van de hond zit het liefst in de darmcellen
+                        van een hond. Een kat of mens wordt er niet ziek van. En de levercellen van
+                        diezelfde hond vind hij ook niet zo interessant. In tegenstelling tot HCC (hepatitis
+                        contagiosis canis = besmettelijke leverziekte van de hond) die zit het liefst in
+                        hondenlevercellen.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Omdat sommige virusziekten toch wel behoorlijk gevaarlijk (lees: dodelijk) kunnen
+                        zijn, zijn we liever niet alleen afhankelijk van de eigen weerstand op dat moment.
+                        Gelukkig hebben we een methode gevonden om het immuunsysteem voor te
+                        bereiden op invasie met de meest gevaarlijke ziekten: de vaccinatie. Zo leert het
+                        immuunsysteem de gevaarlijkste virussen herkennen zodat het meteen op kan
+                        treden als er een het lichaam mocht binnendringen.
+                        Een vaccinatie is dus de enige manier om bescherming tegen virusziekten te krijgen.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="flex items-center flex-wrap mb-20" id="art3">
+            <div class="w-full md:w-1/2">
+                <section class="my-6">
+                    <h3 class="text-2xl font-bold mb-3">Een medische ingreep</h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Een vaccinatie is een behoorlijke medische ingreep. Dat wordt vaak onderschat door
+                        zowel dierenartsen als eigenaren. Want wat gebeurt er allemaal als we zo'n klein
+                        prikje eventjes in een hond stoppen?
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Wat we doen is wat virus, meestal meerdere virussen en/of bacteriën, samen met
+                        stoffen die het immuunsysteem moeten prikkelen in een lichaam stoppen. De
+                        virussen gaan zich vermeerderen en het immuunsysteem gaat reageren. De
+                        zogenaamde Thelper-cellen komen op de indringers af en beginnen ze te bestrijden.
+                        Ze zorgen dat er stoffen vrijkomen die weer andere cellen aantrekken en ze zorgen
+                        ook dat andere, nuttige cellen zich kunnen vermeerderen. Tevens bieden ze de
+                        antigenen (kenmerken) van de virussen aan aan het immuunsysteem zodat deze
+                        specifieke antilichamen kan gaan maken tegen deze specifieke virussen en
+                        bacteriën. Zo worden er speciale Tkiller-cellen gemaakt die afgestemd zijn op alle
+                        ziekten die in de entstof zaten en B-cellen die antilichamen maken. De Tkiller-cellen
+                        zijn bedoeld om ongewenste, met virus besmette, cellen op te ruimen en de
+                        antilichamen die door de B-cellen gemaakt worden helpen bij het bestrijden van
+                        bacteriën en virussen in het bloed of andere vloeistoffen. Van alle B en T-cellen
+                        worden ook geheugencellen gemaakt die zeer lang, waarschijnlijk levenslang,
+                        aanwezig blijven.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Dus als resultaat van een vaccinatie zien we een stijging van antilichamen tegen de
+                        ziektes waar we voor geënt hebben. Dat is meetbaar in het bloed. De gevormde T-
+                        cellen en geheugencellen kunnen we niet meten.
+                        Aan de buitenkant zien we doorgaans niet zoveel gebeuren. Dus het lijkt alsof er
+                        niets gebeurt maar ondertussen wordt het immuunsysteem wel behoorlijk geprikkeld
+                        en daar kan het wel eens mis gaan.
+                    </p>
+                </section>
+            </div>
+            <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                <img
+                        alt="Lumberlake logo met drie Jack Russell Terriërs en tekst 'Lumberlake Jack Russell Terrier' op witte achtergrond"
+                        class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                        src="/img/photobook/31.avif"
+                />
+            </div>
+        </div>
+        <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art4">
+            <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                <img
+                        alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                        class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                        src="/img/photobook/13.avif"
+                />
+            </div>
+            <div class="w-full md:w-1/2">
+                <section class="my-6">
+                    <h3 class="text-2xl font-bold mb-3">Bijwerkingen</h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Doordat het immuunsysteem heel hard aan het reageren is om genoeg antilichamen
+                        te maken heeft het geen tijd om andere dingen te doen. Zo zien we geregeld na een
+                        vaccinatie een ontsteking optreden. Dat kan bijvoorbeeld kennelhoest zijn na een
+                        cocktailenting, of diarree. Dat komt doordat de weerstand tegen andere indringers
+                        even lager is. Tumoren die al wel aanwezig waren maar nog niet ontdekt kunnen
+                        ineens de kop opsteken. Door alle toevoegingen aan de entstof kunnen er
+                        allergische reacties optreden. Dat kan gering zijn, zoals zwelling op de plaats waar
+                        geprikt is tot ernstiger reacties als opzwellen van de hele kop, het hele dier tot shock
+                        en dus ook doodgaan van het dier.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        En ook kan het immuunsysteem dusdanig geprikkeld raken dat het niet meer weet
+                        wat lichaamseigen cellen zijn en wat niet. Dan ontstaan auto-immuunziektes.
+                        Inmiddels wordt algemeen erkend dat AIHA (Auto-Immuun Hemolytische Anemie)
+                        kan worden veroorzaakt door een enting. Dat is een ziekte waarbij het
+                        immuunsysteem de eigen rode bloedcellen afbreekt en waardoor dus bloedarmoede
+                        ontstaat. Maar ook bij andere auto-immuunziekten bestaat het vermoeden dat ze
+                        door vaccinaties kunnen worden veroorzaakt.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        De industrie geeft aan dat bijwerkingen in ongeveer 2 promille voorkomen. Dat is dus
+                        2 op de duizend vaccinaties. In mijn eigen praktijk kwam ik op ongeveer 1%, maar
+                        toen heb ik alleen gekeken wat er binnen 5 dagen na een vaccinatie gebeurde. Ik
+                        vermoed dus dat het percentage bijwerkingen nog wel iets hoger zal liggen, mogelijk
+                        2-5%.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="flex items-center flex-wrap mb-20" id="art5">
+            <div class="w-full md:w-1/2">
+                <section class="my-6">
+                    <h3 class="text-2xl font-bold mb-3">Dode vaccins</h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Er zijn twee soorten vaccins. Dode vaccins en levende vaccins. Ik zal het verschil
+                        uitleggen. Wat we eigenlijk proberen met een vaccinatie is een infectie met een virus
+                        na te bootsen maar dan zonder dat het dier er ziek van wordt. Als we het virus in
+                        stukjes hakken dan kan het zich niet meer vermenigvuldigen, dus dan worden we
+                        niet ziek. Alleen reageert het immuunsysteem ook niet echt omdat het geen heel
+                        virus is dat binnenkomt. Dus moeten weer een stof bijstoppen dat ervoor zorgt dat
+                        het immuunsysteem wel gaat reageren. "Adjunvantia noemen we dat. Het betekent
+                        niets meer en minder dan "toevoeging". We weten nauwelijks nog hoe ze werken.
+                        Wat we wel weten is dat ze het immuunsysteem prikkelen waardoor er antilichamen
+                        geproduceerd gaan worden. Maar doordat ze nogal prikkelend werken kunnen ze
+                        dus ook heftige reacties uitlokken. Dode vaccins werken minder lang dan levende. Ze
+                        moeten dus herhaald worden om een blijvend effect te krijgen, dat heet een booster.
+                        Dode vaccins hebben ook eerder allergische reacties of reacties op de prikplaats
+                        vanwege de adjuvantia die er in zitten.
+                    </p>
+                    <h3 class="text-2xl font-bold mb-3">Levende vaccins</h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Deze worden ook wel MLV (modified live virus) of geattenueerde vaccins genoemd.
+                        Deze virussen hebben we laten vermeerderen in cellen die ze niet heel erg prettig
+                        vinden maar waar ze wel enigszins kunnen vermeerderen. Daardoor verliezen ze
+                        hun kracht. Ze worden zwakker en kunnen niet meer een echte ziekte opwekken. Ze
+                        vermeerderen zich wel enigszins na de vaccinatie en dus zetten ze wel het
+                        immuunsysteem aan het werk. Nadeel daarvan is dat ze wel kunnen verspreiden. Als
+                        de ene hond wel net gevaccineerd is en een andere niet, en deze is ook niet
+                        beschermd door eerdere vaccinaties, dan kan de gevaccineerde hond de andere
+                        hond ziek maken. Ook kan het nog wel eens gebeuren dat als een hond
+                        gevaccineerd wordt terwijl hij erg zwak is, hij ziek wordt. Dan is het virus te sterk voor
+                        de hond en krijgt hij juist de ziekte waar we hem voor wilden beschermen.
+                        Levende vaccins geven wel veel langere bescherming. Ze hoeven ook niet herhaald
+                        te worden om volledig te kunnen werken.
+                    </p>
+                    <h3 class="text-2xl font-bold mb-3">Alleen gezonde honden vaccineren!</h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Alleen een gezonde hond zal op een vaccinatie goed reageren door veel
+                        antilichamen te maken. In de bijsluiter van alle vaccins staat ook duidelijk dat alleen
+                        gezonde dieren gevaccineerd mogen worden. Maar wat is gezond en wat is niet
+                        gezond? Een dier dat onder narcose is voor een sterilisatie? Ik heb net uitgelegd dat
+                        de afweer tegen bacterien tijdelijk wat minder zal zijn.....
+                    </p>
+                    <ul class="list-disc ml-6 space-y-2 mb-8">
+                        <li>
+                            Een hond met epilepsie? Onderzoek heeft uitgewezen dat honden met epilepsie net
+                            na de jaarlijkse vaccinatie vaker toevallen krijgen.
+                        </li>
+                        <li>
+                            Een hond met jeuk? Jeuk kan een allergie zijn en dat is een ontregeling van het
+                            immuunsysteem.
+                        </li>
+                    </ul>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Ook met zijn allen voor een klein prijsje even snel een shot halen zonder dat de hond
+                        goed nagekeken wordt, vind ik een kwalijke zaak. Een vaccinatie is een behoorlijk
+                        zware medische ingreep en moet zorgvuldig gebeuren. Elk individu moet dus ook
+                        met de eigenaar doorgenomen worden en nagekeken worden, zodat er zo veel
+                        mogelijk zekerheid is dat de hond helemaal gezond is en een vaccinatie goed aan
+                        kan.
+                    </p>
+                </section>
+            </div>
+            <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                <img
+                        alt="Lumberlake logo met drie Jack Russell Terriërs en tekst 'Lumberlake Jack Russell Terrier' op witte achtergrond"
+                        class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                        src="/img/photobook/30.avif"
+                />
+            </div>
+        </div>
+        <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art6">
+            <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                <img
+                        alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                        class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                        src="/img/photobook/6.avif"
+                />
+            </div>
+            <div class="w-full md:w-1/2">
+                <section class="my-6">
+                    <h3 class="text-2xl font-bold mb-3">Hoe lang werken ze nu eigenlijk?</h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Hierover is al aardig wat onderzoek gedaan. Meestal worden dan de hoeveelheid
+                        antilichamen gemeten, dat gebeurt door titeren, dus de hoeveelheid wordt ook wel
+                        een titer genoemd en gaat in verdunningen. Dus een titer van 1:48 is hoger dan een
+                        titer van 1: 24. Een titer van 1:80 wordt algemeen als beschermend beschouwd.
+                        Lagere titers houdt in dat het dier mogelijk beschermd is en bij een titer van beneden
+                        de 1:10 wordt de hond als niet beschermd beschouwd.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Belangrijk ook om in de gaten te houden is dat als de titer hoog genoeg is, het dier
+                        niet alleen beschermd is maar dat een vaccinatie dan ook niets meer toevoegt. Een
+                        hoge titer wordt niet nog hoger. Dus vaccineren van beschermde dieren is niet alleen
+                        maar weggegooid geld, het is ook onnodig risico op bijwerkingen.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        En hetzelfde geldt voor pups. Dat we pups zo vaak vaccineren is niet omdat die
+                        vaccins zo slecht werken. Nee, zolang de pup nog antilichamen van de moeder in
+                        zijn bloed heeft, slaat een vaccinatie niet aan. Dus ergens tussen de 6 en de 12
+                        weken is er een van de 3-4 vaccinaties die effectief is. De rest niet.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Er zijn wel een paar onderzoeken geweest naar hoe lang vaccinaties werken:
+                    </p>
+                    <ul class="list-disc list-inside ml-6 space-y-2 mb-8">
+                        <li>
+                            Olson, 1996: 85% van de honden die meer dan 4 jaar geleden gevaccineerd zijn
+                            hadden nog voldoende antilichamen voor hondenziekte
+                        </li>
+                        <li>
+                            Dodds, 1999: van meer dan 1400 willekeurige honden had 95 % voldoende titer voor
+                            parvo en 98% voor hondenziekte.
+                        </li>
+                    </ul>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        In Nederland is een recent onderzoek geweest waarbij naar 4 groepen honden werd
+                        gekeken: pups van 12 weken voordat zij de cocktailenting kregen, jonge honden van
+                        ruim 1 jaar voordat zijn de herhalingsenting kregen, oudere honden die elk jaar of om
+                        het jaar werden geënt en als laatste groep: honden die al langer dan 2 jaar niet
+                        waren geënt. Daaruit bleek dat van de eerste groep, de pups dus, ongeveer 60%
+                        beschermd was voor parvo en ongeveer 10% voor hondenziekte en besmettelijke
+                        leverziekte (HCC). Van de tweede groep was 80% beschermd voor parvo en 50% en
+                        60% voor hondenziekte en besmettelijke leverziekte en de laatste twee groepen
+                        bleek 90% beschermd te zijn voor alle drie de onderzochte ziekten.
+                        De conclusie was dat het enten van pups en jonge honden belangrijk is en daarna
+                        zijn langere intervallen mogelijk.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        In Amerika heeft Ronald Schultz, dierenarts aan de Wisconsin School of Veterinary
+                        Medicine, een ander soort onderzoek gedaan, zogenaamde challenge studies. Bij
+                        een challenge studie wordt niet zozeer gekeken naar de antilichaamtiters, omdat die
+                        niet alles zeggen, er is immers ook nog bescherming door T-cellen en
+                        geheugencellen. In zo'n studie, die alleen met proefdieren kan gebeuren, worden
+                        zowel gevaccineerde als niet gevaccineerde honden besmet met het virus en dan
+                        wordt gekeken of ze ziek worden of niet. Toen bleek dat voor de drie belangrijkste
+                        ziekten: parvo, hondenziekte en HCC een bescherming van zeker 7 jaar gevonden
+                        werd. Het is dus niet zo dat die bescherming na 7 jaar weg was. Langer is er niet
+                        onderzocht. Dus het kan best zijn dat die bescherming langer duurt, mogelijk zelfs
+                        levenslang.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="flex items-center flex-wrap mb-20" id="art7">
+            <div class="w-full md:w-1/2">
+                <section class="my-6">
+                    <h3 class="text-2xl font-bold mb-3">Leptospirose (ziekte van Weil)</h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Leptospirose is een bacteriele ziekte en geen virus. Vaccinaties tegen bacteriën
+                        werken korter en slechter. En de bijwerkingen zijn ook ernstiger. In een vaccin zitten
+                        complete dode bacteriën, die bestaan uit zeer veel eiwitten en al die eiwitten kunnen
+                        een allergische reactie opwekken. Daarnaast is het een dood vaccin dat een
+                        prikkelende stof bevat om het immuunsysteem aan het werk te zetten. Dus nog meer
+                        kans op vervelende reacties. Bij mensen worden er geen vaccins meer gebruikt met
+                        hele bacteriën er in, die zo'n grote kans op bijwerkingen hebben.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Daarnaast speelt het nog dat er meerdere ondersoorten leptospiren zijn. In de entstof
+                        zitten er twee. Twee die in het verleden veel bij honden voorkwamen, namelijk
+                        Leptospira canicola en icterohaemorrhagica. Het is onbekend of dat nog steeds de
+                        meest voorkomende soort is omdat niet wordt bijgehouden als een hond leptospirose
+                        krijgt welke ondersoort het is. In Zuid Duitsland en Italië blijken andere ondersoorten
+                        vaker voor te komen. Het is dus ook de vraag hoe effectief deze vaccinatie is in het
+                        voorkomen van ziekte bij de hond.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Dit alles bij elkaar maakt het lastig om een weloverwogen keuze te maken. Ik houd
+                        als advies aan: als je zo min mogelijk risico wilt lopen en je hebt een hond die niet
+                        eerder op een vaccinatie gereageerd heeft: vaccineer dan wel voor leptospirose.
+                    </p>
+                </section>
+            </div>
+            <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                <img
+                        alt="Lumberlake logo met drie Jack Russell Terriërs en tekst 'Lumberlake Jack Russell Terrier' op witte achtergrond"
+                        class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                        src="/img/photobook/4.avif"
+                />
+            </div>
+        </div>
+        <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art8">
+            <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
+                <img
+                        alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
+                        class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl"
+                        src="/img/photobook/3.avif"
+                />
+            </div>
+            <div class="w-full md:w-1/2">
+                <section class="my-6">
+                    <h3 class="text-2xl font-bold mb-3">Titerbepaling</h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Tegenwoordig is het mogelijk om met behulp van een heel klein druppeltje bloed, te
+                        bepalen of er voldoende antilichamen aanwezig zijn voor de drie belangrijkste
+                        ziekten: parvo, hondenziekte en HCC. Dat zou je elk jaar kunnen doen, maar ik denk
+                        dat dat niet eens nodig is. Als de hond eenmaal goed gereageerd heeft op een
+                        vaccinatie met het aanmaken van voldoende antilichamen dan kunnen we er van
+                        uitgaan dat de rest van het immuunsysteem ook gereageerd heeft en er ook T-cellen
+                        en geheugencellen zijn aangemaakt en dus de hond beschermd is voor een jaar of
+                        5-7. Zo'n titerbepaling kan aantonen dat er bescherming is en dat is handig om te
+                        bepalen of een enting nuttig/nodig is. Dus voor pensions, shows of hondenscholen
+                        kan het wenselijk zijn om een titerbepaling te doen, puur om aan te tonen dat de
+                        hond beschermd is.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        De titerbepaling is ook erg handig om bij pups te kijken of ze al geënt kunnen worden
+                        of nog niet.
+                        Bij pups is het mogelijk om te kijken wanneer de antilichamen die ze van hun moeder
+                        hebben meegekregen weg zijn. En dan is één enting (en daarna een titerbepaling ter
+                        controle) genoeg voor jarenlange bescherming.
+
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        En zo'n titerbepaling is ook erg handig bij honden met een onbekende
+                        vaccinatiestatus om te kijken of ze beschermd zijn of niet.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="flex items-center flex-wrap mb-20 mt-20 pt-20" id="art9">
+            <div class="w-full">
+                <section class="my-6">
+                    <h3 class="text-2xl font-bold mb-3">Wettelijke bepalingen</h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Soms moeten honden gevaccineerd worden vanwege wettelijke regels. Dan is dat
+                        ook zo. Als je naar het buitenland gaat met de hond is hondsdolheid verplicht (de rest
+                        niet!). Er bestaan inmiddels al meerdere fabrikanten die een entstof hebben die voor
+                        drie jaar geregistreerd is. Dat geldt dan alleen binnen de EU, landen buiten de EU
+                        kunnen hun eigen bepalingen hebben.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Ook voor shows, hondenscholen en pensions kunnen er andere bepalingen gelden.
+                        Een titerbepaling heeft nog geen wettelijke status, maar vaak is in goed overleg wel
+                        iets te regelen.
+                    </p>
+                    <div class="text-gray-600 dark:text-slate-300 mb-8 mr-4">
+                        Tannetje Koning, dierenarts
+                        <br>
+                        www.centrumoase.nl
+                        <br>
+                        oase@banditvoeding.nl
+                        <br>
+                        0318-590403
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+</th:block>
+</html>

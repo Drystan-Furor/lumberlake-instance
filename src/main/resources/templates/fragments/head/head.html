@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="head">
+    <th:block th:insert="~{fragments/head/meta/properties/properties :: properties}"></th:block>
+    <th:block th:insert="~{fragments/head/meta/properties/properties :: scripts}"></th:block>
+    <th:block th:insert="~{fragments/head/meta/properties/properties :: links}"></th:block>
+    <th:block th:insert="~{fragments/head/meta/analytics/google-tag :: google-tag}"></th:block>
+    <th:block th:insert="~{fragments/structured-data/json-at-head :: head-json}"></th:block>
+</th:block>
+</html>
