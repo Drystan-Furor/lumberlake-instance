@@ -7,7 +7,6 @@ module.exports = {
     mode: 'production',
     entry: {
         main: path.resolve(staticDir, 'js/main.js'),
-        bucket: path.resolve(staticDir, 'js/bucket.js'),
     },
     output: {
         path: path.resolve(generatedStaticDir, 'build/dist'),

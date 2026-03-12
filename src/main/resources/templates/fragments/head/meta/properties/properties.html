@@ -29,7 +29,9 @@
 
 <th:block th:fragment="scripts">
     <script defer th:src="@{/build/dist/main.bundle.js}" src="/build/dist/main.bundle.js"></script>
-    <script defer th:src="@{/build/dist/bucket.bundle.js}" src="/build/dist/bucket.bundle.js"></script>
+    <script defer
+            th:if="${bucketPage != null}"
+            src="https://unpkg.com/htmx.org@2.0.4/dist/htmx.min.js"></script>
 </th:block>
 
 <th:block th:fragment="links">
@@ -50,8 +52,8 @@
           th:href="@{/img/logo/logo.avif}"
           href="/img/logo/logo.avif"
           fetchpriority="high">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin th:if="${bucketPage != null}">
+    <link rel="dns-prefetch" href="//unpkg.com" th:if="${bucketPage != null}">
     <link rel="canonical" href="https://lumberlake.nl/">
     <link rel="icon" th:href="@{/assets/favicon/favicon.ico}" href="/assets/favicon/favicon.ico">
     <link rel="preload" th:href="@{/build/style.css}" href="/build/style.css" as="style">

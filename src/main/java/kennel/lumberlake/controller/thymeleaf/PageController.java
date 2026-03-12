@@ -1,24 +1,35 @@
 package kennel.lumberlake.controller.thymeleaf;
 
 import kennel.lumberlake.features.awards.service.DogProfileService;
+import kennel.lumberlake.features.bucket.service.BucketService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class PageController {
 
     private final DogProfileService dogProfileService;
+    private final BucketService bucketService;
 
-    public PageController(DogProfileService dogProfileService) {
+    public PageController(
+            DogProfileService dogProfileService,
+            BucketService bucketService
+    ) {
         this.dogProfileService = dogProfileService;
+        this.bucketService = bucketService;
     }
 
     @GetMapping("/")
-    public String showHomePage(Model model) {
+    public String showHomePage(
+            Model model,
+            @RequestParam(name = "bucketVisibleCount", required = false) Integer bucketVisibleCount
+    ) {
         model.addAttribute("emmaProfile", dogProfileService.getProfile("emma"));
         model.addAttribute("kingProfile", dogProfileService.getProfile("king"));
         model.addAttribute("sofietjeProfile", dogProfileService.getProfile("sofietje"));
+        model.addAttribute("bucketPage", bucketService.getInitialBucket(bucketVisibleCount));
         return "index";
     }
 
