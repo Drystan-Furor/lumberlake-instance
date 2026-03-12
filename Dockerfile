@@ -5,10 +5,11 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 COPY tailwind.config.js webpack.config.js ./
+COPY scripts ./scripts
 COPY src/main/resources/static ./src/main/resources/static
 COPY src/main/resources/templates ./src/main/resources/templates
 
-RUN npm run tailwind:build && npm run webpack:build
+RUN npm run images:build && npm run tailwind:build && npm run webpack:build
 
 FROM maven:3.9.11-eclipse-temurin-25 AS build
 WORKDIR /workspace

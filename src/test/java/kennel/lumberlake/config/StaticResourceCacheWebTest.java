@@ -27,8 +27,8 @@ class StaticResourceCacheWebTest {
     }
 
     @Test
-    void imagesAreServedWithLongLivedCacheHeaders() throws Exception {
-        mockMvc.perform(get("/img/logo/logo.avif"))
+    void generatedImagesAreServedWithLongLivedCacheHeaders() throws Exception {
+        mockMvc.perform(get("/img/logo/logo-512.avif"))
                 .andExpect(status().isOk())
                 .andExpect(header().string("Cache-Control", containsString("max-age=31536000")))
                 .andExpect(header().string("Cache-Control", containsString("public")));

@@ -4,6 +4,7 @@
   "description": "kennel lumberlake website",
   "main": "tailwind.config.js",
   "scripts": {
+    "images:build": "node scripts/build-responsive-images.js",
     "tailwind:build": "tailwindcss -i ./src/main/resources/static/css/input.css -o ./target/generated-resources/static/build/style.css",
     "tailwind:watch": "tailwindcss -i ./src/main/resources/static/css/input.css -o ./target/generated-resources/static/build/style.css --watch",
     "webpack:build": "webpack --config webpack.config.js",

@@ -106,6 +106,21 @@
 				<version>3.6.1</version>
 				<executions>
 					<execution>
+						<id>build-images</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<workingDirectory>${project.basedir}</workingDirectory>
+							<executable>${npm.executable}</executable>
+							<arguments>
+								<argument>run</argument>
+								<argument>images:build</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
 						<id>build-tailwind</id>
 						<phase>generate-resources</phase>
 						<goals>

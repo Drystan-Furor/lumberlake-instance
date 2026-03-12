@@ -12,9 +12,11 @@
                     <img
                             alt="lumberlake logo"
                             class="sm:w-1/3 md:w-1/2 mx-auto rounded-full"
-                            width="512" height="512"
-                            src="./img/logo/logo.avif"
-                            fetchpriority="high"
+                            width="960" height="955"
+                            th:attr="srcset=|@{/img/logo/logo-512.avif} 512w, @{/img/logo/logo-960.avif} 960w|,sizes='(min-width: 768px) 448px, (min-width: 640px) 299px, 90vw'"
+                            th:src="@{/img/logo/logo-960.avif}"
+                            src="/img/logo/logo-960.avif"
+                            loading="lazy"
                             decoding="async">
                 </div>
             </div>
@@ -42,7 +44,8 @@
                      width="2048" height="1153"
                      alt="persoon fokker met hond Jack Russell op een show met prijsuitreiking"
                      class="rounded-full sm:max-w-full sm:h-auto "
-                     src="./img/hero.avif">
+                     th:src="@{/img/hero.avif}"
+                     src="/img/hero.avif">
             </div>
             <div class="w-full md:w-1/2 px-8">
                 <div class="text-3xl text-slate-50 dark:text-slate-50 font-bold mb-3">

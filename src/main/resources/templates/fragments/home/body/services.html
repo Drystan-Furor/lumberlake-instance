@@ -53,18 +53,23 @@
                 </div>
             </div>
             <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
-                <img loading="lazy" width="1200" height="800"
+                <img loading="lazy" width="2048" height="1195"
                      alt="Lumberlake logo met drie Jack Russell Terriërs en tekst 'Lumberlake Jack Russell Terrier' op witte achtergrond"
                      class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl "
-                     src="./img/lumberlake-banner.avif">
+                     th:attr="srcset=|@{/img/lumberlake-banner-640.avif} 640w, @{/img/lumberlake-banner-960.avif} 960w, @{/img/lumberlake-banner-1600.avif} 1600w|,sizes='(min-width: 1280px) 656px, (min-width: 1024px) 512px, (min-width: 640px) 50vw, 100vw'"
+                     th:src="@{/img/lumberlake-banner-960.avif}"
+                     src="/img/lumberlake-banner-960.avif"
+                     decoding="async">
             </div>
         </div>
         <div class="flex items-center flex-wrap mb-20 pt-20" id="service_01">
             <div class="w-full mx-auto sm:w-1/2 m-4 p-4">
-                <img loading="lazy" width="1200" height="800"
+                <img loading="lazy" width="640" height="452"
                      alt="Jack Russells, teefje met puppen kijken naar hetzelfde punt"
                      class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl "
-                     src="./img/sociaal.avif">
+                     th:src="@{/img/sociaal-640.avif}"
+                     src="/img/sociaal-640.avif"
+                     decoding="async">
             </div>
             <div class="w-full md:w-1/2">
                 <div class="text-3xl text-yellow-600 dark:text-yellow-600 font-bold mb-3 uppercase">
@@ -125,7 +130,9 @@
                 <img loading="lazy" width="1200" height="800"
                      alt="Jack Russells, teefje Emma leert pup de bijtgrens aan"
                      class="rounded-lg border-2 border-lime-700 sm:max-w-full sm:h-auto shadow-2xl "
-                     src="./img/emma-bijtgrens-aanleren.avif">
+                     th:src="@{/img/emma-bijtgrens-aanleren.avif}"
+                     src="/img/emma-bijtgrens-aanleren.avif"
+                     decoding="async">
             </div>
         </div>
     </section>
