@@ -6,8 +6,10 @@
 </head>
 <body class="min-h-screen font-sans text-gray-700 bg-white dark:bg-slate-800 dark:text-white leading-relaxed tracking-wide transition-colors duration-300">
 
-<th:block th:if="${contentFragment != null}" th:replace="~{${contentTemplate} :: ${contentFragment}}"></th:block>
-<th:block th:insert="~{pages/information/refer-home :: refer-home}"></th:block>
+<main id="main-content">
+    <th:block th:if="${contentFragment != null}" th:replace="~{${contentTemplate} :: ${contentFragment}}"></th:block>
+    <th:block th:insert="~{pages/information/refer-home :: refer-home}"></th:block>
+</main>
 <th:block th:insert="~{fragments/footer/pages/footer :: footer}"></th:block>
 </body>
 </html>
