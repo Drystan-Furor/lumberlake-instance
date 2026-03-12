@@ -152,6 +152,8 @@ Sitemap: http://www.yourdomain.com/sitemaps/sitemap.xml
 
 ```
 ---
+
+```script
 #!/bin/bash
 
 # Set the initial filename counter.
@@ -176,7 +178,7 @@ mv "$file" "$newfile"
 done
 
 echo "Renaming complete."
-
+```
 
 ## GIT
 To create a new repo from a new folder:
@@ -219,5 +221,4 @@ What this does:
 - gh auth setup-git teaches Git to use that token for HTTPS pushes
 
 If you prefer SSH instead, I can give you the SSH setup commands instead.
-
 

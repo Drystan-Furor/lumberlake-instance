@@ -33,7 +33,7 @@ class BucketControllerWebTest {
                 .andExpect(content().string(org.hamcrest.Matchers.containsString("/bucket/page?cursor=12")))
                 .andExpect(content().string(org.hamcrest.Matchers.containsString("/img/photobook/1.avif")))
                 .andExpect(content().string(org.hamcrest.Matchers.containsString("/img/photobook/12.avif")))
-                .andExpect(content().string(org.hamcrest.Matchers.containsString("/img/logo/logo-512.avif")))
+                .andExpect(content().string(org.hamcrest.Matchers.containsString("/img/logo/logo.avif")))
                 .andExpect(content().string(org.hamcrest.Matchers.containsString("/img/lumberlake-banner-640.avif")))
                 .andExpect(content().string(org.hamcrest.Matchers.containsString("/img/sociaal-640.avif")));
     }
